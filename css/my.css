@@ -1,0 +1,1041 @@
+* {
+    font-family: 微软雅黑;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+	display: block;
+}
+
+a:link {
+	text-decoration: none;
+	/* 指正常的未被访问过的链接*/
+	color: #000000;
+}
+
+a:visited {
+	text-decoration: none;
+	/*指已经访问过的链接*/
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	/*指鼠标在链接*/
+	color: #000000;
+}
+
+a:active {
+	text-decoration: none;
+	/* 指正在点的链接*/
+	color: #000000;
+}
+
+/* 用户信息 */
+
+.user-wrapper {
+    background-color: lightskyblue;
+    overflow: hidden;
+}
+
+.set-wrapper {
+    height: 3rem;
+    position: relative;
+}
+
+.set-wrapper .set {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.head-img {
+    height: 6rem;
+    text-align: center;
+}
+
+.head-img img {
+    border-radius: 50%;
+    max-height: 100%;
+    max-width: auto;
+}
+
+.user-inf {
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.user-inf .level {
+    font-weight: 600;
+    color: brown;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.user-inf .num-show img {
+    width: 1.6rem;
+    height: 1.6rem;
+    max-width: auto;
+    max-height: 100%;
+}
+
+/* 个人资产状况 */
+
+.asset-wrapper {
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.asset-wrapper a {
+    color: white;
+}
+
+.asset-wrapper .money-category {
+    margin-bottom: 1rem;
+}
+
+.asset-wrapper .total {
+    border-left: 0.1rem solid white;
+    border-right: 0.1rem solid white;
+}
+
+/* 9个 功能模块 */
+
+.myitems-wrapper {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.myitems-wrapper a {
+    color: #333;
+}
+
+.myitems-wrapper .row {
+    border-bottom: 0.1rem solid #eee;
+}
+
+.myitems-wrapper .row .border-r {
+    border-right: 0.1rem solid #eee;
+}
+
+.myitems-wrapper .row .item-img {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/person_icon.png);
+    background-size: 120px;
+    margin: 0.8rem 0;
+}
+
+.myitems-wrapper .row .img-position1 {
+    background-position: 1px 2px;
+}
+
+.myitems-wrapper .row .img-position2 {
+    background-position: -43px 2px;
+}
+
+.myitems-wrapper .row .img-position3 {
+    background-position: -82px 2px;
+}
+
+.myitems-wrapper .row .img-position4 {
+    background-position: 1px -40px;
+}
+
+.myitems-wrapper .row .img-position5 {
+    background-position: -43px -40px;
+}
+
+.myitems-wrapper .row .img-position6 {
+    background-position: -82px -40px;
+}
+
+.myitems-wrapper .row .img-position7 {
+    background-position: 1px -80px;
+}
+
+.myitems-wrapper .row .img-position8 {
+    background-position: -43px -80px;
+}
+
+.myitems-wrapper .row .img-position9 {
+    background-position: -82px -80px;
+}
+
+.myitems-wrapper .item-name {
+    margin-bottom: 1rem;
+}
+
+/* fund-management 资金管理 */
+
+.next,
+.prev {
+    color: #999;
+    display: inline-block;
+    border-left: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
+}
+
+.next {
+    border: 0;
+    border-right: 0.1rem solid;
+    border-top: 0.1rem solid;
+}
+
+.user-nav {
+    background-color: #fff;
+}
+
+.user-nav .nav-head {
+    position: relative;
+    text-align: center;
+    border-bottom: 0.1rem solid #ccc;
+    height: 4rem;
+}
+
+.user-nav .nav-head .prev {
+    position: absolute;
+    left: 0.8rem;
+    top: 1.2rem;
+}
+
+.user-nav .nav-head h4 {
+    margin: 0;
+    line-height: 4rem;
+}
+
+/* 充值页面 */
+
+.expendable-fund {
+    margin-left: 1.2rem;
+    margin-top: 4rem;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    color: #FC0301;
+}
+
+.my-input-group {
+    border-bottom: 0.1rem solid #eee;
+    margin-bottom: 1rem;
+}
+
+.my-input-group input,
+.my-input-group span {
+    background-color: #fff !important;
+    border: none;
+    outline: none !important;
+}
+
+.expendable-tip {
+    margin: 0 1.2rem 2rem 1.2rem;
+    font-size: 1.2rem;
+    color: #FC0301;
+}
+
+/* 提现 */
+
+.tx-head {
+    width: 98%;
+    margin: 0 auto;
+    height: 3rem;
+    line-height: 3rem;
+    /* text-align: center; */
+    border: 0.1rem solid #4DD0C8;
+    background-color: #fff;
+    position: relative;
+}
+.tx-head .r{
+    position: absolute;
+    right: 0;
+}
+.tx-head a {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    color: #4DD0C8;
+}
+
+.tx-head .select {
+    background-color: #4DD0C8;
+    color: #fff;
+}
+
+.tx-wrapper {
+    background-color: #fff;
+    border-bottom: 0.1rem solid #eee;
+    margin-top: 0 !important;
+}
+
+.tx-wrapper input {
+    border: none !important;
+}
+
+.tx-num {
+    color: #FC0301;
+    margin-left: 1.4rem;
+}
+
+.tx-btn {
+    background: #fff;
+    border: none;
+    outline: 0;
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.tx-phone-num {
+    margin-left: 1.4rem;
+}
+
+.get-code {
+    color: #4DD0C8;
+    position: relative;
+    right: -10rem;
+}
+
+.tip {
+    color: #FC0301;
+    text-indent: 1em;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+/* 收支明细   */
+
+.nav-head .icon-img {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+.payments-head{
+    position: relative;
+    text-indent: 1em;
+}
+.payments-head #dateSelector{
+    border: none;
+    background-color: #f9f9f9;
+}
+.payments-head #dateShowBtn{
+    background-color: #4DD0C8;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    outline: 0;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    position: absolute;
+    right: 1rem;
+    font-size: 1.3rem;
+}
+.payments-body{
+    background-color: #fff;
+    border-top:0.1rem solid #eee;
+    border-bottom:0.1rem solid #eee;
+}
+.payments-body .payments-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    border-bottom:0.1rem solid #ccc;
+}
+.payments-head .pay-num{
+    margin-right: 0.8rem;
+}
+
+.payments-head .payments-total,
+.payments-body .payments-content .list-date{
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 1rem;
+}
+.payments-head .payments-total{
+    margin-top: 0.5rem;
+}
+.payments-body .payments-img{
+    line-height: 56px;
+}
+.payments-body .payments-img img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.payments-body .payments-content .payments-num{
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    font-size: 15px;
+}
+.payments-body .payments-content .payments-category{
+    font-size: 1.2rem;
+}
+.income-red{
+    color: #f30;
+}
+/* 收支 模态框 */
+.my-modal{
+    display: none;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2333;
+}
+.my-modal .m-content{
+    z-index: 2334;
+    background-color: #fff;
+    margin-top: 40px;
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+}
+.detail-list {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-list li {
+    font-size: 1.3rem;
+    line-height: 3rem;
+    border-bottom: 0.1rem solid #eee;
+    text-indent: 1em;
+}
+
+/* 资金管理页面 */
+
+.fund-list {
+    margin-top: 4rem;
+    margin-bottom: 0 !important;
+    font-size: 1.3rem;
+    color: #bbb;
+}
+
+.blod {
+    font-weight: 500;
+    color: #424242;
+}
+
+.border-top {
+    border-top: 0 !important;
+}
+
+.bg {
+    background-color: #f8f8f8;
+}
+
+/* 数额（各种资金） */
+
+.fund-list .list-group-item .amount {
+    position: absolute;
+    right: 0.8rem;
+}
+
+.fund-list .list-group-item .red {
+    color: #FC0301;
+}
+
+.list-group-item .next {
+    position: absolute;
+    top: 1.3rem;
+    right: 0.8rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 4rem;
+}
+
+/* 充值 /提现 容器*/
+
+.fund-list .list-group-item .recharge-wrapper,
+.fund-list .list-group-item .cash-wrapper {
+    right: 2rem;
+}
+
+.fund-list-a {
+    margin: 0;
+}
+
+/* 信息认证  */
+
+.user-inf-list {
+    margin-top: 6rem;
+    font-size: 1.3rem;
+}
+
+.position-r,
+.user-inf-list .user-inf-tip {
+    position: absolute;
+    right: 2rem;
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.user-inf-list .head-img-wrap {
+    height: 8rem;
+    line-height: 6rem;
+}
+
+.user-inf-list .head-img-wrap .head-img {
+    display: inline-block;
+    width: 6rem;
+    position: absolute;
+    right: 3rem;
+    top: 0.7rem;
+}
+
+.user-inf-list .head-img-wrap .next {
+    top: 3.11rem;
+}
+
+.user-inf-list .username-wrap {
+    margin-bottom: 1rem;
+}
+
+.icon-img img {
+    width: 2rem;
+    height: 2rem;
+    max-height: 100%;
+    position: relative;
+    top: -0.1rem;
+}
+
+.icon-color {
+    color: #f79578;
+    font-size: 2rem;
+}
+/* 信息认证调用相机和相册 */
+.inf-modal .m-content{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+.inf-modal .detail-list{
+    margin-bottom: 0;
+}
+.inf-modal .detail-list li{
+    width: 100%;
+    background-color: #fff;
+}
+.inf-modal .detail-list .close-modal{
+    margin-top: 1rem;
+}
+.inf-modal .detail-list li input{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+
+
+/* 信息认证-实名认证 */
+.realname-wrapper .tip-wrapper{
+    height: 6rem;
+}
+.realname-wrapper .font-icon{
+    color: #4DD0C8;
+    font-size: 3rem;
+    text-align: right;
+}
+.realname-wrapper .icon-tip{
+    font-size: 1.3rem;
+    color: #999;
+}
+.realname-wrapper .input-wrap{
+    background-color: #fff;
+    border: 0.1rem solid #eee;
+}
+.realname-wrapper .input-wrap span{
+    line-height: 4rem;
+    text-align: right;
+}
+.realname-wrapper .input-wrap span img{
+    width: 20px;
+    height: 20px;
+}
+.realname-wrapper .input-wrap input{
+    line-height: 4rem;  
+    border: none;
+    outline: 0;
+    font-size: 1.2rem;
+}
+/* 用户设置  user-set */
+
+.u-btn,
+.u-recharge,
+.change-true,
+.logout {
+    width: 100%;
+    line-height: 3rem;
+    background-color: #4DD0C8;
+    color: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.user-inf-list .icon-1 {
+    color: #8dccf5;
+}
+
+.user-inf-list .icon-2 {
+    color: #f79578;
+}
+
+.user-inf-list .icon-3 {
+    color: #fbd678;
+}
+
+.user-inf-list .icon-4 {
+    color: #8dccf5;
+}
+
+.user-inf-list .icon-5 {
+    color: #e2cead;
+}
+
+.user-inf-list .icon-6 {
+    color: #8ebfdf;
+}
+
+.user-inf-list .icon-7 {
+    color: #4ccfc7;
+}
+
+.user-inf-list .icon-8 {
+    color: #fdb560;
+}
+
+.user-inf-list .icon-9 {
+    color: #f68bb7;
+}
+
+/* set---> 推荐好友 隐藏显示 */
+
+.fx-hide {
+    display: none;
+    z-index: 3;
+    position: relative;
+    top: 0;
+}
+
+.set-modal {
+    background-color: #fff;
+}
+
+.set-modal a {
+    height: 50px;
+}
+
+.set-modal a img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* set - 联系客服 */
+.modal-phone{
+    text-align: center;
+}
+.my-modal-footer{
+    padding: 0 !important;
+}
+.my-modal-footer button{
+    width: 49.3%;
+    height: 4rem;
+    background-color: #fff;
+    border: none;
+    outline: 0;
+    /* border-top: 0.1rem solid #eee;    */
+}
+.my-modal-footer .btn-r{
+    color: #4DD0C8;
+    border-left: 0.1rem solid #eee;
+}
+/* 修改密码 */
+
+.change-pwd-wrapper {
+    margin-top: 5rem;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.change-pwd-wrapper .form-group label {
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding: 0 !important;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.change-pwd-wrapper .form-group input {
+    font-size: 1.3rem;
+    caret-color: #fe3f80;
+}
+
+.change-pwd-wrapper .form-group .tip {
+    font-size: 1.2rem;
+    color: #999;
+    text-align: center;
+}
+
+/* set  --->  联系方式 */
+
+.contact-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #999;
+    text-align: center;
+}
+
+.contact-btn-wrap {
+    height: 12rem;
+    background-color: #fff;
+    border-top: 0.1rem solid #ddd;
+    text-align: center;
+    line-height: 12rem;
+    font-size: 1.3rem;
+}
+
+.contact-btn {
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.contact-wrap {
+    margin-top: 4rem;
+    background-color: #fff;
+    font-size: 1.3rem;
+    border-bottom: 0.1rem solid #ddd;
+}
+
+.contact-wrap p {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.contact-wrap .name-phone {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.contact-wrap .name-phone .phone {
+    position: absolute;
+    right: 0;
+}
+
+.contact-operation {
+    font-size: 1.3rem;
+    border-bottom: 0.1rem solid #ddd;
+    background-color: #fff;
+    height: 4rem;
+    line-height: 4rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.contact-operation .df-circle {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 0.15rem solid #333;
+    border-radius: 50%;
+    position: relative;
+    top: 0.2rem;
+}
+
+.contact-operation .default {
+    margin-left: 0.5rem;
+}
+
+.contact-operation .edit,
+.contact-operation .delete {
+    position: absolute;
+}
+
+.contact-operation .edit {
+    right: 7.5rem;
+}
+
+.contact-operation .delete {
+    right: 0.5rem;
+}
+
+/* color 点击触发添加类 */
+
+.contact-operation .color {
+    color: #4DD0C8;
+}
+.contact-operation .default .color{
+    background-color: #4DD0C8;
+    border-color: #4DD0C8;
+}
+
+/* set--> 联系方式 add */
+
+.margin-top {
+    margin-top: 5rem;
+}
+
+.contact-group {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.area-wrapper {
+    font-size: 1.3rem;
+    background-color: #fff;
+}
+
+.area-wrapper .area-tip {
+    position: relative;
+    left: 1.3rem;
+}
+
+.area-wrapper form {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.area-wrapper form select {
+    width: 31.3333%;
+}
+
+.set-default {
+    margin-top: 1rem;
+    background-color: #fff;
+    line-height: 5rem;
+    height: 5rem;
+    position: relative;
+    text-indent: 1em;
+}
+
+.set-default .df-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    width: 6rem;
+    height: 3rem;
+    border: 0.15rem solid #ccc;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+}
+
+.set-default .df-btn .circle {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    right: 28px;
+}
+
+.set-default .bg-color {
+    background-color: #4DD0C8;
+    border-color: #4DD0C8;
+}
+
+/* 信息认证-->我的手机号-修改手机号 */
+
+.u-phone-tip {
+    margin-top: 6rem;
+    font-size: 1.3rem;
+    color: #999;
+}
+
+.u-phone-tip .icon {
+    font-size: 3rem;
+    color: #4DD0C8;
+}
+
+.u-phone-tip .phone-num-wrap {
+    font-size: 1.2rem;
+}
+
+.u-phone-tip .phone-num {
+    color: #4DD0C8;
+}
+
+.phone-num-group img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.phone-num-group #code {
+    background-color: #4DD0C8 !important;
+    color: white;
+    border-radius: 0;
+}
+
+.my-input-group span,
+.my-input-group input {
+    font-size: 1.3rem !important;
+}
+
+.phone-btn {
+    height: 4rem;
+    line-height: 4rem;
+}
+
+/* 信息认证 ->我的银行卡 */
+
+.add-card {
+    display: block;
+    height: 6rem;
+    margin-top: 6rem;
+    font-size: 5rem;
+    color: #ccc;
+    text-align: center;
+    line-height: 5rem;
+    border: 0.1rem dashed #999;
+}
+
+/* 绑定 添加银行卡 */
+
+.card-name {
+    height: 8rem;
+    line-height: 8rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.card-name p {
+    position: absolute;
+    left: 5rem;
+    font-size: 1.3rem;
+}
+
+.card-a {
+    display: block;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+/* 绑定 银行卡 开户行信息 */
+
+.bind-tip {
+    position: relative;
+    text-indent: 1em;
+    color: #999;
+}
+
+.bind-tip .font-icon {
+    color: #4DD0C8;
+    font-size: 3rem;
+    margin-right: 1rem;
+    position: relative;
+    top: 1rem;
+}
+
+.card-name-kh {
+    background-color: #fff;
+    height: 4rem;
+    line-height: 4rem;
+    margin-top: 2rem;
+    text-indent: 1em;
+}
+
+.list-wrapper {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.list-wrapper .list-name {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+}
+
+.list-wrapper .btn-group {
+    width: 78%;
+}
+
+.list-wrapper .btn-group .btn-default {
+    width: 100%;
+    color: #4DD0C8;
+    background-image: none;
+    border-radius: 0;
+}
+
+.list-wrapper .btn-group .btn-default span {
+    color: #333;
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+}
+
+.list-wrapper .select-wrapper {
+    display: inline-block;
+}
+
+.list-wrapper input {
+    width: 78%;
+    border: 0.1rem solid #eee;
+    outline: 0;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-indent: 1em;
+}
+.atip{
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    width: 15rem;
+    margin: 1rem auto 0 auto;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+#file{
+    display: none;
+}
+/*底部菜单*/
+
+.navbar a {
+    color: #454545;
+    display: block;
+}
+
+.navbar {
+    background: #f8f8f9;
+    text-align: center;
+    padding: .8rem 0;
+}
+
+.navselected span,
+.navselected p {
+    color: #d11128;
+}
+
+.glyphicons {
+    font-size: 2rem;
+}
+.clearmg {
+    margin-bottom: 0rem;
+}
+
+.clearmg1 {
+    margin: 0rem 0rem;
+}
+
+/*底部菜单结束*/

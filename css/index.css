@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+
+
+.wrapper {
+    overflow: hidden;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
+
+
+.wrapper {
+    margin-bottom: 6rem;
+}
+
+
+/* 搜索框 */
+
+.fix {
+    z-index: 999;
+    background-color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0 -7px 0 -7px !important;
+}
+
+.fix-i {
+    padding: 8px;
+    margin: 0px !important;
+}
+
+.search-wrapper {
+    /* margin: 0.8em; */
+    background-color: #f0f0f2;
+    border: 0.1rem solid #f0f0f2;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.search-wrapper .search-img {
+    position: absolute;
+    top: 0.6rem;
+    left: 1.2rem;
+    display: inline-block;
+    width: 3rem;
+    height: 3.5rem;
+    background-image: url(../images/fdj.png);
+    background-size: 3rem 3.5rem;
+}
+
+.search-wrapper a {
+    color: #999;
+}
+
+.search-wrapper a p {
+    position: absolute;
+    left: 4.7rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+}
+
+.loop {
+    margin-top: 53px;
+}
+
+.swiper-container img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+/* 众筹 */
+
+.nav {
+    margin-top: 1rem;
+}
+
+.nav .category-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.nav .category-wrapper a {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.nav .category-wrapper p {
+    margin-bottom: 0;
+}
+
+.nav .category-wrapper .category-nav {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background-size: 50px;
+    background-image: url(../images/fenlei.png);
+}
+
+.house {
+
+    background-position: 0 -56px;
+}
+
+.other {
+    background-position: 0 -114px;
+}
+
+.my {
+    background-position: 0 -172px;
+}
+
+
+
+
+
+
+/* 资讯 */
+
+.information .inf-logo-wrap {
+    padding-right: 0rem;
+}
+
+.information .inf-logo-wrap .inf-img img {
+    width: 100%;
+}
+
+.information {
+    margin-top: 1rem;
+    border-bottom: 0.8rem solid #f0f0f2;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.information .inf-list {
+    /*height: 3rem;*/
+    overflow: hidden;
+    /*  text-overflow: ellipsis;
+    white-space: nowrap;*/
+}
+
+.notice {
+    background: url(http://www.17sucai.com/preview/11/2013-04-30/scrolltext/images/bg.gif) no-repeat;
+    /*background-size:100% 100%;*/
+    height: 100%;
+}
+
+.noticTipTxt {
+    color: #ff7300;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0 0 0 3rem;
+    overflow: hidden;
+}
+
+.noticTipTxt li {
+    height: 2rem;
+    line-height: 2rem;
+    list-style: none;
+}
+
+.noticTipTxt a {
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.center-vertical {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+
+
+/* 众筹具体项目列表 */
+
+.zc-itmes {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.zc-itmes .item {
+    margin: 1rem 0.8rem 0 0.8rem;
+    background-color: #f0f0f2;
+    line-height: 3rem
+}
+
+.item .item-name {
+    margin-bottom: 0;
+    margin-left: 2rem;
+}
+
+
+
+
+
+
+/* 金额 */
+
+.item-condition {
+    padding: 1rem 0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.item-condition p {
+    text-align: left;
+    text-indent: 2em;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.item-condition .money {
+    margin-top: 0.5rem;
+    color: #FC0301;
+}
+
+.item-condition .money span {
+    font-size: 1.6rem;
+}
+
+
+
+
+
+
+/* 进度 */
+
+.progress-wrapper {
+    padding-top: 1rem;
+    padding-right: 0;
+}
+
+.progress-wrapper p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.progress-wrapper .progress {
+    height: 0.5rem;
+}
+
+.progress-wrapper .progress .progress-bar {
+    background-color: #48D1CA;
+    background-image: none;
+}
+
+.progress-num {
+    position: relative;
+}
+
+.progress-num span {
+    position: absolute;
+    top: 3rem;
+}
+
+
+
+
+
+
+/* 时间 */
+
+.timer {
+    border-top: 1px solid #f0f0f0;
+    line-height: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+}
+
+.timer .timer-icon {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.timer .item-time {
+    display: inline-block;
+    color: #999;
+}
+
+.timer .zc-state {
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: #fff;
+    background-color: #48D1CA;
+}
+
+
+
+
+
+
+/*底部菜单*/
+
+.navbar a {
+    color: #454545;
+    display: block;
+}
+
+.navbar {
+    background: #f8f8f9;
+    text-align: center;
+    padding: .8rem 0;
+}
+
+.navselected span,
+.navselected p {
+    color: #d11128;
+}
+
+.glyphicons {
+    font-size: 2rem;
+}
+
+.clearmg {
+    margin-bottom: 0rem;
+}
+
+.clearmg1 {
+    margin: 0rem 0rem;
+}
+
+
+
+
+
+
+/*底部菜单结束*/

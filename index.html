@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-4.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dropload.css" />
+    <script src="js/swiper-4.3.2.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid wrapper">
+        <!-- 搜索框 -->
+        <div class="fix navbar-fixed-top fix-i">
+            <div class=" search-wrapper">
+                <a href="search.html">
+                    <span class="search-img"></span>
+                    <p>输入标号或者标题关键字</p>
+                </a>
+            </div>
+        </div>
+        <!-- 轮播图 -->
+        <div class="row loop">
+            <div class="col-sm col-xs">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/loop1.jpg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/loop2.jpg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/loop3.jpg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/loop4.jpg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/loop5.jpg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/loop6.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 众筹类别导航 -->
+        <!--<div class="row nav">
+            <div class="col-xs-3 col-sm-3 category-wrapper">
+                <a class="category-nav car" href="#"></a>
+                <p>
+                    <a href="Crowd-funding.html">车辆众筹</a>
+                </p>
+            </div>
+            <div class="col-xs-3 col-sm-3 category-wrapper">
+                <a class="category-nav house" href="#"></a>
+                <p>
+                    <a href="house.html">房产众筹</a>
+
+                </p>
+            </div>
+            <div class="col-xs-3 col-sm-3 category-wrapper">
+                <a class="category-nav other" href="#"></a>
+                <p>
+                    <a href="other.html">其他众筹</a>
+
+                </p>
+            </div>
+            <div class="col-xs-3 col-sm-3 category-wrapper">
+                <a class="category-nav my" href="#"></a>
+                <p>
+                    <a href="#">车辆众筹</a>
+
+                </p>
+            </div>
+        </div>-->
+        <!-- 资讯 -->
+        <div class="row information">
+            <div class="col-xs-3 col-sm-3 inf-logo-wrap">
+                <a href="#" class="inf-img">
+                    <img src="images/zx.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-xs-9 col-sm-9 inf-list ">
+                <div class="notice  ">
+                    <ul id="jsfoot01" class="noticTipTxt">
+                        <li>
+                            <a href="http://www.17sucai.com/">中e众筹618理财节</a>
+                        </li>
+                        <li>
+                            <a href="http://www.17sucai.com/">中e众筹618理财节</a>
+                        </li>
+                        <li>
+                            <a href="http://www.17sucai.com/">中e众筹618理财节</a>
+                        </li>
+                        <li>
+                            <a href="http://www.17sucai.com/">中e众筹618理财节</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<ul>
+                    <li>
+                        <span class="icon-circle"></span>
+                        <a href="#">
+                            中e众筹618理财节
+                        </a>
+                    </li>
+                    <li>
+                        <span class="icon-circle"></span>
+                        <a href="#">
+                            中e众筹618理财节
+                        </a>
+                    </li>
+                    <li>
+                        <span class="icon-circle"></span>
+                        <a href="#">
+                            中e众筹618理财节
+                        </a>
+                    </li>
+                </ul>-->
+                <!--文字滚动-->
+                <script type="text/javascript" src="js/scrolltext.js"></script>
+                <script type="text/javascript">
+                    if (document.getElementById("jsfoot01")) {
+                        var scrollup = new ScrollText("jsfoot01");
+                        scrollup.LineHeight = 24; //单排文字滚动的高度
+                        scrollup.Amount = 1; //注意:子模块(LineHeight)一定要能整除Amount.
+                        scrollup.Delay = 20; //延时
+                        scrollup.Start(); //文字自动滚动
+                        scrollup.Direction = "down"; //文字向下滚动
+                    }
+                </script>
+                <!--文字滚动-->
+            </div>
+        </div>
+        <div class="khfxWarp ">
+            <div class="khfxPane">
+                <div class='row zc-itmes'>
+                    <div class='row'>
+                        <div class='col-xs col-sm item'>
+                            <p class='item-name'>第8926期-宝马X3</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-4 col-sm-4 item-condition'>
+                            <p>众筹金额</p>
+                            <p class='money'>
+                                <span>26.80</span>万
+                            </p>
+                        </div>
+                        <div class='col-xs-6 col-sm-6 progress-wrapper'>
+                            <p>众筹进度</p>
+                            <div class='progress'>
+                                <div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: 60%;'>
+                                    <span class='sr-only'>60% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-xs-2 col-sm-2 progress-num'>
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class='row timer'>
+                        <div class='col-xs-9 col-sm-9'>
+                            <span class='timer-icon'></span>
+                            <p class='item-time'>2018-6-8 16:21:42</p>
+                        </div>
+                        <div class='col-xs-3 col-sm-3'>
+                            <span class='zc-state'>认筹中</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row zc-itmes">
+                    <div class="row">
+                        <div class="col-xs col-sm item">
+                            <p class="item-name">第8925期-宝马X6</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 item-condition">
+                            <p>众筹金额</p>
+                            <p class="money">
+                                <span>26.80</span>万
+                            </p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 progress-wrapper">
+                            <p>众筹进度</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                    <span class="sr-only">100% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 progress-num">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                    <div class="row timer">
+                        <div class="col-xs-9 col-sm-9">
+                            <span class="timer-icon"></span>
+                            <p class="item-time">2018-6-8 16:21:42</p>
+                        </div>
+                        <div class="col-xs-3 col-sm-3">
+                            <span class="zc-state">待售中</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row zc-itmes">
+                    <div class="row">
+                        <div class="col-xs col-sm item">
+                            <p class="item-name">第8924期-宝马X3</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 item-condition">
+                            <p>众筹金额</p>
+                            <p class="money">
+                                <span>26.80</span>万
+                            </p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 progress-wrapper">
+                            <p>众筹进度</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 progress-num">
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class="row timer">
+                        <div class="col-xs-9 col-sm-9">
+                            <span class="timer-icon"></span>
+                            <p class="item-time">2018-6-8 16:21:42</p>
+                        </div>
+                        <div class="col-xs-3 col-sm-3">
+                            <span class="zc-state">认筹中</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--下拉加载-->
+    <script src="js/dropload.js"></script>
+    <script src="js/khData.js"></script>
+    <!--下拉加载-->
+    <div class="container-fluid navbar-fixed-bottom navbar">
+        <div class="row clearmg1">
+            <div class="col-xs-3">
+                <a href="index.html" class="navselected">
+                    <span class="glyphicon glyphicon-home glyphicons"></span>
+                    <p class="clearmg">首页</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="Crowd-funding.html" href="Crowd-funding.html">
+                    <span class="glyphicon glyphicon-equalizer glyphicons"></span>
+                    <p class="clearmg">众筹</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="information.html">
+                    <span class="glyphicon glyphicon-bullhorn glyphicons"></span>
+                    <p class="clearmg">资讯</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="my.html">
+                    <span class="glyphicon glyphicon-user glyphicons"></span>
+                    <p class="clearmg">我的</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // swiper 轮播图
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            // 分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>

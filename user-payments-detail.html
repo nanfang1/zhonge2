@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user-payments-detail</title>
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/iScroll.js"></script>
+    <script src="js/Mdate.js"></script>
+	<script src="js/back.js"></script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 导航 -->
+        <nav class="user-nav navbar-fixed-top">
+            <div class="nav-head">
+                <a id="back" class="prev"></a>
+                <h4>收支明细</h4>
+                <span class="icon-img modal-btn">
+                    <img src="images/detail.png" alt="">
+                </span>
+            </div>
+        </nav>
+    </div>
+    <div class="payments-head margin-top">
+        <input type="text" id="dateSelector" placeholder="2018-6" readonly="readonly">
+        <button type="button" id="dateShowBtn">查询月明细</button>
+        <div class="payments-total">
+            支出￥
+            <span class="pay-num">9999.99</span>
+            收入￥
+            <span class="income-num">9999.99</span>
+        </div>
+
+    </div>
+    <div class="container payments-body">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 payments-img">
+                <img src="images/头像.jpg" alt="">
+            </div>
+            <div class="col-xs-10 col-sm-10 payments-content">
+                <div class="payments-item">房产众筹第xxx期认购收益</div>
+                <div class="payments-category">[收益]</div>
+                <div class="list-date">2018年6月21日17:23:35</div>
+                <div class="payments-num income-red">+1200.00</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 payments-img">
+                <img src="images/头像.jpg" alt="">
+            </div>
+            <div class="col-xs-10 col-sm-10 payments-content">
+                <div class="payments-item">认购房产众筹第xxx期</div>
+                <div class="payments-category">[投资]</div>
+                <div class="list-date">2018年6月21日17:23:35</div>
+                <div class="payments-num">-120098.00</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 payments-img">
+                <img src="images/头像.jpg" alt="">
+            </div>
+            <div class="col-xs-10 col-sm-10 payments-content">
+                <div class="payments-item">转出至银行卡6263*******123</div>
+                <div class="payments-category">[提现]</div>
+                <div class="list-date">2018年6月21日17:23:35</div>
+                <div class="payments-num">-1200.00</div>
+            </div>
+        </div>
+    </div>
+    <div class="my-modal">
+        <div class="m-content">
+            <ul class="detail-list">
+                <li>
+                    <span>123</span>
+                    全部明细
+                </li>
+                <li>
+                    <span></span>
+                    充值记录
+                </li>
+                <li>
+                    <span></span>
+                    提现记录
+                </li>
+                <li>
+                    <span></span>
+                    众筹收益
+                </li>
+                <li>
+                    <span></span>
+                    续投奖励
+                </li>
+                <li>
+                    <span></span>
+                    补贴奖励
+                </li>
+                <li>
+                    <span></span>
+                    活动奖励
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        new Mdate("dateShowBtn", {
+            acceptId: "dateSelector",
+            beginYear: "2017",
+            beginMonth: "1",
+            format: "-"
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user-inf</title>
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+		<script src="js/back.js"></script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 导航 -->
+        <nav class="user-nav navbar-fixed-top">
+            <div class="nav-head">
+                <a id="back" class="prev"></a>
+                <h4>信息认证</h4>
+            </div>
+        </nav>
+    </div>
+
+    <div class="list-group user-inf-list">
+        <div class="list-group-item blod head-img-wrap modal-btn">
+            修改头像
+            <span class="head-img">
+                <img src="images/头像.jpg" alt="">
+            </span>
+            <span class="next"></span>
+            
+        </div>
+        <div class="list-group-item blod username-wrap">
+            <span class="icon-img">
+                <img src="images/user.png" alt="">
+            </span>
+            用户名
+            <span class="user-inf-tip username">
+                username
+            </span>
+        </div>
+        <a href="#" class="list-group-item blod">
+            <span class="icon-img">
+                <img src="images/cc-card.png" alt="">
+            </span>
+            实名认证
+            <span class="user-inf-tip">
+                已认证
+            </span>
+            <span class="next"></span>
+        </a>
+        <a href="#" class="list-group-item blod">
+            <span class="icon-img">
+                <img src="images/tg.png" alt="">
+            </span>
+            托管账户
+            <span class="user-inf-tip">
+                请绑定
+            </span>
+            <span class="next"></span>
+        </a>
+        <a href="user-bank-card.html" class="list-group-item blod">
+            <span class="icon-img">
+                <img src="images/credit card-fill.png" alt="">
+            </span>
+            我的银行卡
+            <span class="user-inf-tip">
+                查看
+            </span>
+            <span class="next"></span>
+        </a>
+        <a href="user-change-phone.html" class="list-group-item blod">
+            <span class="glyphicon glyphicon-phone icon-color"></span>
+            我的手机
+            <span class="user-inf-tip">
+                修改
+            </span>
+            <span class="next"></span>
+        </a>
+    </div>
+    <div class="my-modal inf-modal">
+            <div class="m-content">
+                <ul class="detail-list">
+                    <li>
+                        拍照
+                        <input type="file" name="file" accept="image/*" capture="camera">
+                    </li>
+                    <li>
+                        相册
+                        <input type="file" id="file" accept="image/*">
+                    </li>
+                    <li class="close-modal">
+                        取消
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <script>
+       
+    </script>
+</body>
+
+</html>

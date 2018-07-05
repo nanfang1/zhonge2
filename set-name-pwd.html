@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>set-name-pwd</title>
+    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+	<script src="js/back.js"></script>
+</head>
+
+<body class="login-bg">
+    <div class="container inf-wrapper">
+        <!-- 导航 -->
+        <nav class="login-nav navbar-fixed-top">
+           <a id="back" class="prev"></a>
+            <h4>设置用户名和密码</h4>
+        </nav>
+        <div class="container form-wrapper set-wrapper">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <form action="">
+                        <div class="input-wrapper notice-wrapper">
+                            <span class="glyphicon glyphicon-exclamation-sign form-icon notice"></span>
+                            <p class="tip">请谨慎操作，绑定后不可以修改</p>
+                        </div>
+                        <div class="input-wrapper">
+                            <span class="form-icon">
+                                <img src="images/setuser.png" alt="">
+                            </span>
+                            <input type="text" class="username" placeholder="请输入用户名" autofocus="autofocus">
+                        </div>
+                        <p class="tip">3-20个字母、数字、汉字、注册后不可修改</p>
+
+                        <div class="input-wrapper">
+                            <span class="form-icon">
+                                <img src="images/pwdimg.png" alt="">
+                            </span>
+                            <input type="password" class="password" placeholder="请输入密码">
+                            <span class="glyphicon glyphicon-eye-open hide-pwd"></span>
+                        </div>
+                        <p class="tip">
+                            密码由字母、数字、组成，必须含有字母大写和小写，密码为8-32位
+                        </p>
+                        <input type="button" value="确定" class="btn" onclick="tip(setNamePwd)">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

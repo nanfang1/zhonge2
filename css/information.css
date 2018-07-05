@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+    /*display: block;*/
+}
+a:link {
+    text-decoration: none;
+    /* 指正常的未被访问过的链接*/
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+    /*指已经访问过的链接*/
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    /*指鼠标在链接*/
+    color: #000000;
+}
+
+a:active {
+    text-decoration: none;
+    /* 指正在点的链接*/
+    color: #000000;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
+.col-xs-4 {
+    text-align: center;
+}
+
+.inf-wrapper {
+    padding: 0 !important;
+}
+
+
+/* 资讯导航 */
+
+.inf-nav {
+    background-color: #fff;
+}
+
+.inf-nav .nav-head {
+    position: relative;
+    text-align: center;
+    border-bottom: 0.1rem solid #bfbfc7;
+    height: 4rem;
+}
+
+.inf-nav .nav-head .prev {
+    position: absolute;
+    left: 0.8rem;
+    top: 1.2rem;
+}
+
+.inf-nav .nav-head h4 {
+    margin: 0;
+    line-height: 4rem;
+}
+
+.nav-body ul {
+    list-style: none;
+    height: 4rem;
+    margin-bottom: 0;
+}
+
+.nav-body ul li {
+    display: block;
+    width: 25%;
+    float: left;
+    background-color: #f0f0f2;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.nav-body ul a {
+    color: #333;
+    font-family: 微软雅黑;
+}
+
+.select {
+    border-bottom: 1px solid #48D1CA;
+}
+
+
+/* 轮播图  */
+
+.inf-loop {
+    margin-top: 0rem;
+}
+
+.swiper-container img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+/*.center-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}*/
+#newsList li{
+	/*position: relative; height: 7rem;*/
+}
+
+/* 资讯文章  */
+
+.inf-content {
+    border-bottom: 0.1rem solid #bfbfc7;
+}
+
+.inf-content a h5 {
+    color: #333;
+}
+
+.inf-content .inf-img {
+    width: 10rem;
+    height: 6rem;
+    margin-top: 1rem;
+}
+
+.inf-content .inf-abstract h5 {
+    height: 30.4px;
+}
+
+.inf-content .inf-from {
+    color: #999;
+    position: relative;
+}
+
+.inf-content .inf-from .inf-author {
+    position: absolute;
+    right: 0;
+}
+
+
+/* 日报 */
+
+.daily-list li {
+    line-height: 4rem;
+    border-bottom: 0.1rem solid #bfbfc7;
+}
+
+.circle-icon {
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #333;
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.daily-list {
+    /*margin-bottom: 6rem;*/
+}
+
+.daily-list li a {
+    color: #333;
+}
+
+.new {
+    margin-bottom: 6rem;
+}
+
+
+/* 新闻  二级页面 具体文章 */
+
+.inf-item {
+    margin-top: 4rem;
+    border-bottom: 0.1rem dashed #bfbfc7;
+    margin-bottom: 5rem;
+}
+
+.item-content p,
+.disclaimer p {
+    text-indent: 2em;
+    font-size: 1.4rem;
+}
+
+.item-content .item-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.p-right {
+    text-align: right;
+}
+
+
+/* 搜索页面 */
+
+.inf-nav .search-nav {
+    height: 5rem;
+}
+
+.search-wrapper {
+    width: 90%;
+    height: 4rem;
+    position: relative;
+    left: 1.8rem;
+    margin: 1rem;
+    background-color: #f0f0f2;
+}
+
+.search-wrapper ul {
+    position: absolute;
+    left: 0.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    overflow: hidden;
+}
+
+.search-wrapper ul li {
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    top: 18px;
+    left: 42px;
+    display: inline-block;
+    border-width: 5px 3px 0 3px;
+    border-style: solid;
+    border-color: #999 transparent transparent transparent;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+.search-wrapper form {
+    position: absolute;
+    left: 58px;
+    top: 11px;
+}
+
+.search-wrapper form input {
+    background-color: #f0f0f2;
+    border: none;
+    outline: 0;
+}
+
+.search-wrapper .search-img {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.8rem;
+    display: inline-block;
+    width: 3rem;
+    height: 3.5rem;
+    background-image: url(../images/fdj.png);
+    background-size: 3rem 3.5rem;
+}
+
+
+/* 登录页面 */
+
+.login-bg {
+    background-color: #f6f6f6;
+}
+
+.login-nav {
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    position: relative;
+    border-bottom: 0.1rem solid #f4f4f4;
+    background-color: #fafafa;
+}
+
+#back {
+    color: #999;
+    display: inline-block;
+    border: none;
+    border-left: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
+}
+
+.login-nav .prev {
+    position: absolute;
+    top: 1.6rem;
+    left: 1.5rem;
+}
+
+.login-nav a {
+    display: inline-block;
+    width: 20%;
+    border: 1px solid #4DD0C8;
+    line-height: 3rem;
+    color: #4DD0C8;
+}
+
+.login-nav .login {
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    margin-right: -0.5rem;
+}
+
+.login-nav .register {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.login-nav .select {
+    color: #fff;
+    background-color: #4DD0C8;
+}
+
+
+/* 登录页面 表单 */
+
+.form-wrapper {
+    margin-top: 8rem;
+    padding: 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-wrapper {
+    background-color: #fff;
+    border-bottom: 0.1rem solid #eee;
+}
+
+
+/* 小图标 */
+
+.form-icon {
+    text-align: center;
+    display: inline-block;
+    width: 8%;
+    color: #4DD0C8;
+    font-size: 2rem;
+    position: relative;
+    top: 4px !important;
+}
+
+.form-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: -4px;
+}
+
+
+.form-wrapper input {
+    display: inline-block;
+    width: 89%;
+    height: 4rem;
+    border: none;
+    outline: 0;
+    font-size: 1.3rem;
+    caret-color: #fe3f80;
+}
+
+.form-wrapper .input-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.form-wrapper .input-wrapper .hide-pwd {
+    display: inline-block;
+    width: 20%;
+    color: #999;
+    position: absolute;
+    right: 1.2rem;
+    top: 1.3rem;
+    text-align: right;
+}
+
+.form-wrapper .input-wrapper-prov {
+    position: relative;
+    border-bottom: 0.1rem solid #eee;
+    background-color: #fff;
+    display: none;
+}
+
+.form-wrapper .password {
+    width: 69%;
+}
+
+.form-wrapper .input-wrapper .get-code {
+    background-color: #4DD0C8;
+    color: #fff;
+}
+
+.form-wrapper .input-wrapper .get-code,
+.form-wrapper .input-wrapper-prov .register-code {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.form-wrapper .btn {
+    width: 100%;
+    background-color: #4DD0C8;
+    color: #fff;
+    outline: none !important;
+    margin-top: 3rem;
+}
+
+.forget-pwd {
+    font-size: 1.2rem;
+    color: #4DD0C8;
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: 0.8rem;
+}
+
+
+/* 注册页面 部分css沿用 登录页面 */
+
+.form-wrapper .resgister-prov {
+    display: block;
+}
+
+.resgister-login {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-right: 0.8rem;
+    text-align: right;
+}
+
+.form-wrapper .agreement {
+    margin-top: 4rem;
+    margin-bottom: -1.8rem;
+    color: #4DD0C8;
+    font-size: 1.2rem;
+}
+
+.nav-body ul .select a,
+.form-wrapper form .input-wrapper .show-pwd,
+.forget-pwd a,
+.resgister-login a,
+.form-wrapper .agreement a {
+    color: #4DD0C8;
+}
+
+.tip {
+    color: #999;
+    font-size: 1.2rem;
+    text-indent: 2rem;
+    margin-top: 1rem;
+}
+
+
+/* 设置用户名和密码部分 */
+
+.set-wrapper {
+    margin-top: 5rem;
+}
+
+.notice-wrapper {
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #f6f6f6;
+}
+
+.notice-wrapper .notice {
+    font-size: 2rem;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+.notice-wrapper .tip {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.3rem;
+    text-indent: 1em;
+}
+
+
+/* 注册成功 */
+
+.reg {
+    margin-top: 8rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.reg .suc-icon {
+    color: #4DD0C8;
+    margin-right: 0.3rem;
+    font-size: 2rem;
+}
+
+.sm-title {
+    text-align: center;
+    line-height: 3rem;
+    background-color: #4DD0C8;
+    color: #fff;
+}
+
+
+/* 模态框 */
+
+#myModal {
+    margin-top: 13rem;
+}
+
+#myModal .modal-header {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #4DD0C8;
+}
+
+#myModal .modal-footer .btn {
+    border-color: #4DD0C8;
+    background-image: none;
+}
+
+#myModal .modal-footer .btn-default {
+    color: #4DD0C8;
+}
+
+#myModal .modal-footer .btn-primary {
+    background-color: #4DD0C8;
+}
+
+.modal-body .input-wrapper {
+    width: 79%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    height: 4rem;
+    line-height: 3rem;
+}
+
+.modal-body .input-wrapper .form-icon {
+    width: 20%;
+}
+
+.modal-body .input-wrapper input {
+    border: none;
+    outline: 0;
+}
+
+.atip {
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    width: 15rem;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+
+
+
+/*底部菜单*/
+
+.navbar a {
+    color: #454545;
+    display: block;
+}
+
+.navbar {
+    background: #f8f8f9;
+    text-align: center;
+    padding: .8rem 0;
+}
+
+.navselected span,
+.navselected p {
+    color: #d11128;
+}
+
+.glyphicons {
+    font-size: 2rem;
+}
+
+.clearmg {
+    margin-bottom: 0rem;
+}
+
+.clearmg1 {
+    margin: 0rem 0rem;
+}
+
+
+/*底部菜单结束*/
