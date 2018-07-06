@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/soshm.js"></script>
     <script src="js/index.js"></script>
-	<script src="js/back.js"></script>
     <style>
         body {
             background-color: #f9f9f9;
@@ -29,18 +29,13 @@
         <!-- 导航 -->
         <nav class="user-nav navbar-fixed-top">
             <div class="nav-head">
-                <a id="back" class="prev"></a>
+                <span class="prev"></span>
                 <h4>设置</h4>
             </div>
         </nav>
     </div>
 
     <div class="list-group user-inf-list">
-        <a href="#" class="list-group-item blod">
-            <i class="iconfont icon-1">&#xe686;</i>
-            手势密码
-            <span class="next"></span>
-        </a>
 
         <a href="change-pwd.html" class="list-group-item blod">
             <i class="iconfont icon-2">&#xe6a8;</i>
@@ -52,62 +47,31 @@
             联系方式
             <span class="next"></span>
         </a>
-        <a class="list-group-item blod fx">
+
+        <a class="list-group-item blod" id="share">
             <i class="iconfont icon-4">&#xe624;</i>
             推荐好友
             <span class="next"></span>
+
         </a>
+
         <a class="list-group-item blod" data-toggle="modal" data-target=".bs-example-modal-sm">
             <i class="iconfont icon-5">&#xe63f;</i>
             联系客服
             <span class="next"></span>
         </a>
-        <a href="#" class="list-group-item blod">
-            <i class="iconfont icon-6">&#xe64a;</i>
-            查看欢迎页
-            <span class="next"></span>
-        </a>
-        <a href="#" class="list-group-item blod">
-            <i class="iconfont icon-7">&#xe791;</i>
-            清除缓存
-            <span class="position-r">
-                0.00KB
-            </span>
-            <span class="next"></span>
-        </a>
+
         <a href="#" class="list-group-item blod">
             <i class="iconfont icon-8">&#xe640;</i>
             关于我们
             <span class="next"></span>
         </a>
-        <a href="#" class="list-group-item blod">
-            <i class="iconfont icon-9">&#xe61e;</i>
-            版本更新
-            <span class="version position-r">
-                4.5.4
-            </span>
-            <span class="next"></span>
-        </a>
+
     </div>
 
 
     <button class="logout">退出登录</button>
-    <div class="container fx-hide">
-        <div class="row  set-modal">
-            <a class="col-sm-3 col-xs-3">
-                <img src="images/qq.png" alt="">
-            </a>
-            <a class="col-sm-3 col-xs-3">
-                <img src="images/wx.png" alt="">
-            </a>
-            <a class="col-sm-3 col-xs-3">
-                <img src="images/wxpyq.png" alt="">
-            </a>
-            <a class="col-sm-3 col-xs-3">
-                <img src="images/fzlj.png" alt="">
-            </a>
-        </div>
-    </div>
+
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
@@ -121,6 +85,23 @@
             </div>
         </div>
     </div>
+
 </body>
+<script>
+    window.onload = function () {
+        document.getElementById('share').addEventListener('click', function () {
+            soshm.popIn({
+                // 分享的链接，默认使用location.href
+                url: '',
+                // 分享的摘要，默认使用<meta name="description" content="">content的值
+                digest: '',
+                // 分享的标题，默认使用document.title
+                title: '弹窗分享',
+                sites: ['weixin', 'weixintimeline', 'qzone', 'qq']
+            });
+        }, false);
+    }
+
+</script>
 
 </html>

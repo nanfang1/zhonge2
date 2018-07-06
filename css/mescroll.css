@@ -53,6 +53,12 @@
      height: 100%;
      overflow-y: auto;
      -webkit-overflow-scrolling: touch;
+     position: fixed;
+
+     /*margin-top: 8rem;*/
+     top: 8rem;
+     bottom: 0;
+     height: auto;
  }
  /*启用硬件加?:动画渲染流畅,解决IOS下拉刷新因隐藏进度条致使的闪屏问?,在下拉刷新和上拉加载触发时启?,结束后移?,避免滥用导致其他兼容性问?*/
 

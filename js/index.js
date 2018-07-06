@@ -116,7 +116,23 @@ $(document).ready(function () {
     $('.nav-head .prev').click(function () {  
         javascript:history.go(-1);
     })
-
+	 // 首页资讯 轮播
+    function test() {
+        var looper =$('.inf-list')
+        val = parseInt(looper.css('top'));
+        if (val > -60) {
+            looper.animate({
+                top: '-=3rem'
+            }, 300);
+        } else {
+            looper.animate({
+                top: '0px'
+            }, 300);
+        }
+    }
+    timer = setInterval(function () {
+        test();
+    }, 2500);
 })
 // 表单验证
 // --存储页面信息

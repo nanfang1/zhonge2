@@ -32,20 +32,51 @@
 }
 
 
+
 /*跳转搜索结束*/
 
+
+/*下拉刷新*/
+
+.mescroll {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    height: auto;
+}
+
+
+/*展示上拉加载的数据列表*/
+
+.news-list li {
+    /*padding: 16px;*/
+    /*border-bottom: 1px solid #eee;*/
+}
+
+.news-list .new-content {
+    font-size: 14px;
+    /*margin-top: 6px;*/
+    /*margin-left: 10px;*/
+    color: #666;
+}
+
+
 /*头部固定*/
-.fixed_top{
-	background-color: #FFFFFF;
+
+.fixed_top {
+    background-color: #FFFFFF;
 }
-.centerNav ul{
-	margin-bottom: 0rem;
+
+.centerNav ul {
+    margin-bottom: 0rem;
 }
+
+
 /*众筹分类*/
 
 .margin_bottom {
     margin-bottom: 6rem;
-	margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 .centerNav ul {
@@ -71,7 +102,9 @@
 }
 
 
+
 /*众筹分类结束*/
+
 
 /*分类列表*/
 
@@ -202,6 +235,7 @@ img {
 }
 
 
+
 /*分类列表结束*/
 
 
@@ -226,5 +260,6 @@ img {
 .glyphicons {
     font-size: 2rem;
 }
+
 
 /*底部菜单结束*/

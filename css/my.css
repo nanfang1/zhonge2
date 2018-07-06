@@ -1,35 +1,7 @@
 * {
     font-family: 微软雅黑;
 }
-a{
-	text-decoration: none;
-	color: #000000;
-	display: block;
-}
 
-a:link {
-	text-decoration: none;
-	/* 指正常的未被访问过的链接*/
-	color: #000000;
-}
-
-a:visited {
-	text-decoration: none;
-	/*指已经访问过的链接*/
-	color: #000000;
-}
-
-a:hover {
-	text-decoration: none;
-	/*指鼠标在链接*/
-	color: #000000;
-}
-
-a:active {
-	text-decoration: none;
-	/* 指正在点的链接*/
-	color: #000000;
-}
 
 /* 用户信息 */
 
@@ -113,6 +85,29 @@ a:active {
 
 .myitems-wrapper a {
     color: #333;
+}
+.myitems-wrapper a:link {
+	text-decoration: none;
+	/* 指正常的未被访问过的链接*/
+	color: #000000;
+}
+
+.myitems-wrapper a:visited {
+	text-decoration: none;
+	/*指已经访问过的链接*/
+	color: #000000;
+}
+
+.myitems-wrapper a:hover {
+	text-decoration: none;
+	/*指鼠标在链接*/
+	color: #000000;
+}
+
+.myitems-wrapper a:active {
+	text-decoration: none;
+	/* 指正在点的链接*/
+	color: #000000;
 }
 
 .myitems-wrapper .row {
@@ -1015,6 +1010,41 @@ a:active {
     color: #454545;
     display: block;
 }
+.navbar a:link {
+    text-decoration: none;
+}
+
+
+
+
+/* 指正常的未被访问过的链接*/
+
+.navbar a:visited {
+    text-decoration: none;
+}
+
+
+
+
+/*指已经访问过的链接*/
+
+.navbar a:hover {
+    text-decoration: none;
+}
+
+
+
+
+/*指鼠标在链接*/
+
+.navbar a:active {
+    text-decoration: none;
+}
+
+
+
+
+/* 指正在点的链接*/
 
 .navbar {
     background: #f8f8f9;
@@ -1039,3 +1069,10 @@ a:active {
 }
 
 /*底部菜单结束*/
+/*下拉刷新*/
+.mescroll {
+    position: fixed;
+    top: 0rem;
+    bottom: 0;
+    height: auto;
+}

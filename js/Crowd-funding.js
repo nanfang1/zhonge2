@@ -77,6 +77,7 @@
              try {
                  var newArr = [];
                  if (pageNum == 0) {
+					 // window.location.href="Crowd-funding.html";//刷新页面
                      //此处模拟下拉刷新返回的数据
                      downIndex++;
                      var newObj = {

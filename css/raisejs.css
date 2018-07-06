@@ -1,6 +1,4 @@
-.top {
-	margin-top: 4rem;
-}
+
 
 .details {
 	line-height: 3rem;
@@ -52,4 +50,7 @@ img{
 }
 p{
 	color: #737373;
+}
+#mescroll{
+	top: 4rem;
 }

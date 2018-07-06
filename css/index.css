@@ -5,6 +5,7 @@
 }
 
 
+
 .wrapper {
     overflow: hidden;
 }
@@ -24,6 +25,8 @@
 .wrapper {
     margin-bottom: 6rem;
 }
+
+
 
 
 /* 搜索框 */
@@ -90,6 +93,8 @@
 
 
 
+
+
 /* 众筹 */
 
 .nav {
@@ -137,66 +142,90 @@
 
 
 
+
+
 /* 资讯 */
 
-.information .inf-logo-wrap {
-    padding-right: 0rem;
-}
-
-.information .inf-logo-wrap .inf-img img {
-    width: 100%;
-}
-
 .information {
+    position: relative;
     margin-top: 1rem;
     border-bottom: 0.8rem solid #f0f0f2;
-    padding-bottom: 1rem;
-    position: relative;
+    overflow: hidden;
+}
+
+.information .inf-logo-wrap {
+    height: 3rem;
+    padding-top: .4rem;
 }
 
 .information .inf-list {
-    /*height: 3rem;*/
-    overflow: hidden;
-    /*  text-overflow: ellipsis;
-    white-space: nowrap;*/
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 9rem;
 }
 
-.notice {
-    background: url(http://www.17sucai.com/preview/11/2013-04-30/scrolltext/images/bg.gif) no-repeat 1px -1px;
-    /*background-size:100% 100%;*/
-    height: 100%;
+.information ul {
+    position: absolute;
+    height: 3rem;
+    width: 100%;
 }
 
-.noticTipTxt {
-    color: #ff7300;
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0 0 0 3rem;
+.information ul li {
+    position: relative;
+    height: 3rem;
     overflow: hidden;
 }
 
-.noticTipTxt li {
-    height: 2rem;
-    line-height: 2rem;
-    list-style: none;
+.information ul li a {
+    display: inline-block;
+    position: absolute;
+    left: 1.5rem;
+    height: 3rem;
+    color: rgb(102, 98, 98);
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+.information ul li a:link{text-decoration:none; }  /* 指正常的未被访问过的链接*/
+
+.information ul li a:visited{text-decoration:none; }/*指已经访问过的链接*/
+
+.information ul li a:hover{text-decoration:none;}/*指鼠标在链接*/}
+
+.information ul li a:active{text-decoration:none;}/* 指正在点的链接*/ 
+
+
+
+.information ul li .icon-circle {
+    position: absolute;
+    top: 1.25rem;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #FC0301;
+    border-radius: 50%;
 }
 
-.noticTipTxt a {
-    color: #000000;
-    font-size: 1rem;
-    text-decoration: none;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+
+/*.information .inf-logo-wrap {
+    padding-right: 0rem;
+}*/
+
+.information .inf-logo-wrap .inf-img img {
+    width: 100%;
+    /*height: 100%;*/
 }
+
+
+
 
 
 .center-vertical {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
 
 
 
@@ -217,6 +246,8 @@
     margin-bottom: 0;
     margin-left: 2rem;
 }
+
+
 
 
 
@@ -247,6 +278,8 @@
 .item-condition .money span {
     font-size: 1.6rem;
 }
+
+
 
 
 
@@ -288,6 +321,8 @@
 
 
 
+
+
 /* 时间 */
 
 .timer {
@@ -316,6 +351,8 @@
     color: #fff;
     background-color: #48D1CA;
 }
+
+
 
 
 
@@ -352,9 +389,37 @@
     margin: 0rem 0rem;
 }
 
+.navbar a:link {
+    text-decoration: none;
+}
 
 
 
+/* 指正常的未被访问过的链接*/
+
+.navbar a:visited {
+    text-decoration: none;
+}
+
+
+
+/*指已经访问过的链接*/
+
+.navbar a:hover {
+    text-decoration: none;
+}
+
+
+
+/*指鼠标在链接*/
+
+.navbar a:active {
+    text-decoration: none;
+}
+
+
+
+/* 指正在点的链接*/
 
 
 /*底部菜单结束*/

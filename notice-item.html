@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>news-item</title>
+    <link rel="stylesheet" type="text/css" href="css/mescroll.css" />
     <link rel="stylesheet" href="css/information.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/back.js"></script>
+    <script src="js/back.js"></script>
+    <script src="js/mescroll.js"></script>
 </head>
 
 <body>
@@ -22,56 +24,115 @@
                 <h4>公告</h4>
             </div>
         </nav>
-
-        <!-- 标题 时间作者0 -->
-        <div class="container inf-content inf-item">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 inf-abstract">
-                    <h3 class="inf-title">关于“房屋认筹第5572-第6313期”到期未出售部分选择回购或延期的结果说明？</h3>
-                    <p class="inf-from">
-                        <span class="inf-date">2018年06月11日</span>
-                        <span class="inf-author">作者：小e</span>
-                    </p>
+        <div id="mescroll" class="mescroll">
+            <!-- 标题 时间作者0 -->
+            <div class="container inf-content inf-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 inf-abstract">
+                        <h3 class="inf-title">关于“房屋认筹第5572-第6313期”到期未出售部分选择回购或延期的结果说明？</h3>
+                        <p class="inf-from">
+                            <span class="inf-date">2018年06月11日</span>
+                            <span class="inf-author">作者：小e</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container item-content">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <p>
-                        尊敬的用户：
-                    </p>
-                    <p>
-                        您好！
-                    </p>
-                    <p>
+            <div class="container item-content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <p>
+                            尊敬的用户：
+                        </p>
+                        <p>
+                            您好！
+                        </p>
+                        <p>
                             平台于2018年6月1日发起对“房屋认筹第5572期-第6313期”项目，到期未完成出售标的“延期”和“回购”提醒，即用户可以自行决定对相关标的自己认筹的部分进行“延期”或“回购”处理，过期不选将默认为选择“回购” 。
-                    </p>
-                    <p>
+                        </p>
+                        <p>
                             截至2018年6月11日，选择房屋延期的金额为22356.68万元、选择回购的金额为2173.39万元。
-                    </p>
-                    <p>
+                        </p>
+                        <p>
                             延期和回购具体操作请参考《关于“房屋认筹第5572-第6313期”到期未出售部分选择回购或延期的规则说明》的公告。
-                    </p>
-                    <p>
-                        特此说明
-                    </p>
-                    <p>
-                        望广大用户周知！
-                    </p>
-                    <p class="p-right">
-                        中e众筹运营部
-                    </p>
-                    <p class="p-right">
-                        2018年6月11日16:08:57
-                    </p>
+                        </p>
+                        <p>
+                            特此说明
+                        </p>
+                        <p>
+                            望广大用户周知！
+                        </p>
+                        <p class="p-right">
+                            中e众筹运营部
+                        </p>
+                        <p class="p-right">
+                            2018年6月11日16:08:57
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        
 
+        </div>
 
     </div>
+    <script>
+        //下拉刷新
+        $(function () {
+            //创建MeScroll对象
+            var mescroll = new MeScroll("mescroll", {
+                down: {
+                    auto: false, //是否在初始化完毕之后自动执行下拉回调callback; 默认true
+                    callback: downCallback //下拉刷新的回调
+                },
+                up: {
+                    use: false //禁止上滑刷新
+                }
+            });
+
+            /*下拉刷新的回调 */
+            function downCallback() {
+                //联网加载数据
+                getListDataFromNet(0, 1, function (data) {
+                    //联网成功的回调,隐藏下拉刷新的状态
+                    mescroll.endSuccess();
+                    //设置列表数据
+                    setListData(data, false);
+                }, function () {
+                    //联网失败的回调,隐藏下拉刷新的状态
+                    mescroll.endErr();
+                });
+            }
+            /*设置列表数据*/
+            function setListData(data, isAppend) {
+
+            }
+
+            /*联网加载列表数据*/
+            var downIndex = 0;
+
+            function getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) {
+                //延时一秒,模拟联网
+                setTimeout(function () {
+                    try {
+                        var newArr = [];
+                        if (pageNum == 0) {
+                            //刷新页面
+                            window.location.reload();
+                        }
+                        //联网成功的回调
+                        successCallback && successCallback(newArr);
+                    } catch (e) {
+                        //联网失败的回调
+                        errorCallback && errorCallback();
+                    }
+                }, 1000)
+            }
+
+            //禁止PC浏览器拖拽图片,避免与下拉刷新冲突;如果仅在移动端使用,可删除此代码
+            document.ondragstart = function () {
+                return false;
+            }
+        });
+    </script>
 </body>
 
 </html>

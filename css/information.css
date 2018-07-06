@@ -3,34 +3,7 @@
     padding: 0;
     font-family: 微软雅黑;
 }
-a {
-    text-decoration: none;
-    color: #000000;
-    /*display: block;*/
-}
-a:link {
-    text-decoration: none;
-    /* 指正常的未被访问过的链接*/
-    color: #000000;
-}
 
-a:visited {
-    text-decoration: none;
-    /*指已经访问过的链接*/
-    color: #000000;
-}
-
-a:hover {
-    text-decoration: none;
-    /*指鼠标在链接*/
-    color: #000000;
-}
-
-a:active {
-    text-decoration: none;
-    /* 指正在点的链接*/
-    color: #000000;
-}
 
 @media (min-width: 768px) {
     .container {
@@ -45,6 +18,9 @@ a:active {
 .inf-wrapper {
     padding: 0 !important;
 }
+
+
+
 
 
 /* 资讯导航 */
@@ -95,6 +71,38 @@ a:active {
     border-bottom: 1px solid #48D1CA;
 }
 
+.nav-body ul a:link {
+    text-decoration: none;
+}
+
+
+
+/* 指正常的未被访问过的链接*/
+
+.nav-body ul a:visited {
+    text-decoration: none;
+}
+
+
+
+/*指已经访问过的链接*/
+
+.nav-body ul a:hover {
+    text-decoration: none;
+}
+
+
+
+/*指鼠标在链接*/
+
+.nav-body ul a:active {
+    text-decoration: none;
+}
+
+
+
+/* 指正在点的链接*/
+
 
 /* 轮播图  */
 
@@ -108,14 +116,21 @@ a:active {
     vertical-align: middle;
 }
 
+
+
+
 /*.center-vertical {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }*/
-#newsList li{
-	/*position: relative; height: 7rem;*/
+
+#newsList li {
+    /*position: relative; height: 7rem;*/
 }
+
+
+
 
 /* 资讯文章  */
 
@@ -146,6 +161,50 @@ a:active {
     position: absolute;
     right: 0;
 }
+
+#newsList a:link {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* 指正常的未被访问过的链接*/
+
+#newsList a:visited {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*指已经访问过的链接*/
+
+#newsList a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*指鼠标在链接*/
+
+#newsList a:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* 指正在点的链接*/
 
 
 /* 日报 */
@@ -178,10 +237,13 @@ a:active {
 }
 
 
+
+
+
 /* 新闻  二级页面 具体文章 */
 
 .inf-item {
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     border-bottom: 0.1rem dashed #bfbfc7;
     margin-bottom: 5rem;
 }
@@ -200,6 +262,9 @@ a:active {
 .p-right {
     text-align: right;
 }
+
+
+
 
 
 /* 搜索页面 */
@@ -266,6 +331,8 @@ a:active {
 }
 
 
+
+
 /* 登录页面 */
 
 .login-bg {
@@ -323,6 +390,9 @@ a:active {
 }
 
 
+
+
+
 /* 登录页面 表单 */
 
 .form-wrapper {
@@ -336,6 +406,9 @@ a:active {
     background-color: #fff;
     border-bottom: 0.1rem solid #eee;
 }
+
+
+
 
 
 /* 小图标 */
@@ -369,8 +442,9 @@ a:active {
 }
 
 .form-wrapper .input-wrapper {
-    width: 100%;
+    width: 96%;
     position: relative;
+    margin: 0 auto;
 }
 
 .form-wrapper .input-wrapper .hide-pwd {
@@ -388,6 +462,9 @@ a:active {
     border-bottom: 0.1rem solid #eee;
     background-color: #fff;
     display: none;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form-wrapper .password {
@@ -413,11 +490,12 @@ a:active {
 }
 
 .form-wrapper .btn {
-    width: 100%;
+    width: 96%;
     background-color: #4DD0C8;
     color: #fff;
     outline: none !important;
     margin-top: 3rem;
+    margin-left: 2%;
 }
 
 .forget-pwd {
@@ -427,6 +505,9 @@ a:active {
     margin-top: 2rem;
     margin-right: 0.8rem;
 }
+
+
+
 
 
 /* 注册页面 部分css沿用 登录页面 */
@@ -465,6 +546,9 @@ a:active {
 }
 
 
+
+
+
 /* 设置用户名和密码部分 */
 
 .set-wrapper {
@@ -491,6 +575,9 @@ a:active {
 }
 
 
+
+
+
 /* 注册成功 */
 
 .reg {
@@ -512,6 +599,9 @@ a:active {
     background-color: #4DD0C8;
     color: #fff;
 }
+
+
+
 
 
 /* 模态框 */
@@ -572,6 +662,9 @@ a:active {
 
 
 
+
+
+
 /*底部菜单*/
 
 .navbar a {
@@ -602,5 +695,59 @@ a:active {
     margin: 0rem 0rem;
 }
 
+.navbar a:link {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* 指正常的未被访问过的链接*/
+
+.navbar a:visited {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*指已经访问过的链接*/
+
+.navbar a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*指鼠标在链接*/
+
+.navbar a:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* 指正在点的链接*/
+
 
 /*底部菜单结束*/
+
+
+/*下拉刷新*/
+
+.mescroll {
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    height: auto;
+}
