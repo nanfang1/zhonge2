@@ -139,7 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!pop) {
 	    pop = doc.createElement('div');
 			pop.className = 'soshm-pop';
-			var body = document.body;			
+			var body = document.body;
 	    body.appendChild(pop);
 	  }
 
@@ -175,7 +175,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var elem = doc.querySelector('.soshm-weixin-sharetip');
 	    if (!elem) {
 	      var  elem = doc.createElement('div');
-	      elem.className = 'soshm-weixin-sharetip';
+				elem.className = 'soshm-weixin-sharetip';
+				var body = document.body;				
 	      body.appendChild(elem);
 	    }
 	    elem.classList.add('weixin-sharetip-show');
@@ -214,6 +215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    if (device.isQQBrowser) {
+				// alert('qq浏览器');
 	      if (nativeShareApps[site]) app = nativeShareApps[site][2];
 	      if (app !== undefined) {
 	        if (window.browser) {
@@ -229,6 +231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	          browser.app && browser.app.share(shareInfo);
 	        } else {
+						// alert('else');
 	          loadScript('//jsapi.qq.com/get?api=app.share', function() {
 	            shareTo(site, data);
 	          });
@@ -255,8 +258,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // 在普通浏览器里点击微信分享，通过QQ浏览器当桥梁唤起微信客户端
 	  // 如果没有安装QQ浏览器则点击无反应
 	  if (site.indexOf('weixin') !== -1) {
-	    var mttbrowserURL = appendToQuerysting(location.href, {__soshmbridge: site});
-	    openAppByScheme('mttbrowser://url=' + mttbrowserURL);
+	    // var mttbrowserURL = appendToQuerysting(location.href, {__soshmbridge: site});
+			// openAppByScheme('mttbrowser://url=' + mttbrowserURL);
+			alert('请在浏览器的菜单中分享至微信');
 	  }
 
 	  // 在微信里点微信分享，弹出右上角提示
@@ -367,7 +371,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      script.onload = onreadystatechange
 	      script.parentNode.removeChild(script);
 	    }
-	  };
+		};
+		var body = document.body;		
 	  body.appendChild(script);
 	}
 
@@ -381,7 +386,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  } else {
 	    var iframe = doc.createElement('iframe');
 	    iframe.style.display = 'none';
-	    iframe.src = scheme;
+			iframe.src = scheme;
+			var body = document.body;			
 	    body.appendChild(iframe);
 	    setTimeout(function() {
 	      iframe && iframe.parentNode && iframe.parentNode.removeChild(iframe);

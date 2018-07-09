@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user-bank-card</title>
+    <link rel="stylesheet" type="text/css" href="css/mescroll.css" />
     <link rel="stylesheet" href="css/my.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-		<script src="js/back.js"></script>
+    <script src="js/back.js"></script>
+    <script src="js/mescroll.js"></script>
     <style>
         body {
             background-color: #f9f9f9;
         }
+		#mescroll{
+			top: 4rem;
+		}
+		.add-card{
+			margin-top: 2rem;
+		}
     </style>
 </head>
 
@@ -29,12 +37,72 @@
             </div>
         </nav>
     </div>
-    <a class="add-card" href="user-bank-addcard.html">
-      
-        +
+    <div id="mescroll" class="mescroll">
+        <a class="add-card" href="user-bank-addcard.html">
 
-    </a>
-    
+            +
+
+        </a>
+    </div>
+    <script>
+        //下拉刷新
+        $(function () {
+            //创建MeScroll对象
+            var mescroll = new MeScroll("mescroll", {
+                down: {
+                    auto: false, //是否在初始化完毕之后自动执行下拉回调callback; 默认true
+                    callback: downCallback //下拉刷新的回调
+                },
+                up: {
+                    use: false //禁止上滑刷新
+                }
+            });
+
+            /*下拉刷新的回调 */
+            function downCallback() {
+                //联网加载数据
+                getListDataFromNet(0, 1, function (data) {
+                    //联网成功的回调,隐藏下拉刷新的状态
+                    mescroll.endSuccess();
+                    //设置列表数据
+                    setListData(data, false);
+                }, function () {
+                    //联网失败的回调,隐藏下拉刷新的状态
+                    mescroll.endErr();
+                });
+            }
+            /*设置列表数据*/
+            function setListData(data, isAppend) {
+
+            }
+
+            /*联网加载列表数据*/
+            var downIndex = 0;
+
+            function getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) {
+                //延时一秒,模拟联网
+                setTimeout(function () {
+                    try {
+                        var newArr = [];
+                        if (pageNum == 0) {
+                            //刷新页面
+                            window.location.reload();
+                        }
+                        //联网成功的回调
+                        successCallback && successCallback(newArr);
+                    } catch (e) {
+                        //联网失败的回调
+                        errorCallback && errorCallback();
+                    }
+                }, 1000)
+            }
+
+            //禁止PC浏览器拖拽图片,避免与下拉刷新冲突;如果仅在移动端使用,可删除此代码
+            document.ondragstart = function () {
+                return false;
+            }
+        });
+    </script>
 </body>
 
 </html>

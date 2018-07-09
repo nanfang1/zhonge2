@@ -747,7 +747,10 @@
 
 .mescroll {
     position: fixed;
-    top: 4rem;
+    top: 8rem;
     bottom: 0;
     height: auto;
+}
+.downwarp-content{
+	top: 0rem;
 }

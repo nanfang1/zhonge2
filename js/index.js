@@ -176,7 +176,11 @@ function tip(myPage) {                                     //参数 判断是哪
         $('.modal-content').append("<div class='atip'></div>");
         var atip = $('.atip');
         atip.css({ 'marginBottom': '3rem' });
-    } else {
+    } else if(myPage == 'tx'){
+		$('.atip').remove();
+		$('.mescroll').append("<div class='atip'></div>");
+		var atip = $('.atip');
+	}else {
         $('.atip').remove();
         $('body').append("<div class='atip'></div>");
         var atip = $('.atip');

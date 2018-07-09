@@ -61,7 +61,7 @@
             <span class="next"></span>
         </a>
 
-        <a href="#" class="list-group-item blod">
+        <a href="about.html" class="list-group-item blod">
             <i class="iconfont icon-8">&#xe640;</i>
             关于我们
             <span class="next"></span>
@@ -80,7 +80,9 @@
                 </div>
                 <div class="modal-footer my-modal-footer">
                     <button type="button" class="btn-l" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn-r">确定</button>
+                    <button type="button" class="btn-r">
+                        <a href="wtai://wp/mc;1334562213">确定</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -89,19 +91,23 @@
 </body>
 <script>
     window.onload = function () {
+        var llq = window.navigator.userAgent;
         document.getElementById('share').addEventListener('click', function () {
+            if ((llq.split('QQ')).length - 1 == 2) {
+                alert('请点击右上角QQ分享按钮进行分享');
+                return;
+            }
+            if (llq.indexOf('MicroMessenger') !== -1) {
+                soshm.weixinSharetip();
+                return;
+            } 
             soshm.popIn({
-                // 分享的链接，默认使用location.href
-                url: '',
-                // 分享的摘要，默认使用<meta name="description" content="">content的值
-                digest: '',
-                // 分享的标题，默认使用document.title
                 title: '弹窗分享',
                 sites: ['weixin', 'weixintimeline', 'qzone', 'qq']
             });
+        
         }, false);
     }
-
 </script>
 
 </html>

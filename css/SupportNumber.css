@@ -50,7 +50,7 @@ a:active {
 
 .table-style {
 	width: 94%;
-	margin: 4.8rem auto 0rem auto;
+	margin: 0rem auto 0rem auto;
 }
 
 .table-style td,
@@ -79,4 +79,10 @@ a:active {
 .table-style thead>tr>td{
 	padding:1.2rem .8rem;
 	color: #4DD0C8;
+}
+.mescroll{
+	top: 4rem;
+}
+.downwarp-content{
+	top: 0rem;
 }

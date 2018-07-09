@@ -6,7 +6,7 @@ $(function () {
                 type: 'confirm',
                 titleText: "请登陆！",
                 onClickOk: function () {
-                    window.location.href = "./minutepage2.1.html";
+                    window.location.href = "./login.html";
                     flag1 = true;
                 },
                 onClickCancel: function () {
@@ -22,7 +22,7 @@ $(function () {
         		type: 'confirm',
         		titleText: "请登陆！",
         		onClickOk: function () {
-        			window.location.href = "./minutepage2.1.html";
+        			window.location.href = "./login.html";
         			flag1 = true;
         		},
         		onClickCancel: function () {

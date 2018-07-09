@@ -8,10 +8,12 @@
     <title>支持人数</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/public-top.css" />
+    <link rel="stylesheet" type="text/css" href="css/mescroll.css" />
     <link rel="stylesheet" type="text/css" href="css/SupportNumber.css" />
     <link rel="stylesheet" type="text/css" href="css/Initialization.css" />
-	<script src="js/jquery.min.js"></script>
-	<script src="js/back.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/back.js"></script>
+    <script src="js/mescroll.js"></script>
 </head>
 
 <body>
@@ -22,167 +24,200 @@
                 <h4>支持人数</h4>
             </div>
         </div>
-        <table class=" table table-style">
-            <thead>
-                <tr>
-                    <td>认购人</td>
-                    <td>认购金额</td>
-                    <td>认购时间</td>
-                    <td>认购类型</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-                <tr>
-                    <td>chen*aa</td>
-                    <td>10000 </td>
-                    <td>2018-6-10
-                        <br>12:15</td>
-                    <td>PC</td>
-                </tr>
-
-            </tbody>
-        </table>
+        <div id="mescroll" class="mescroll">
+            <table class=" table table-style">
+                <thead>
+                    <tr>
+                        <td>认购人</td>
+                        <td>认购金额</td>
+                        <td>认购时间</td>
+                        <td>认购类型</td>
+                    </tr>
+                </thead>
+                <tbody id="newsList" class="news-list">
+                    <tr>
+                        <td>chen</td>
+                        <td>123</td>
+                        <td>2018-6-10
+                            <br>12:15</td>
+                        <td>PC</td>
+                    </tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+					<tr>
+						<td>chen</td>
+						<td>123</td>
+						<td>2018-6-10
+							<br>12:15</td>
+						<td>PC</td>
+					</tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script>
-        	$(function(){
-        		$(".fix .nav-head a").click(function(){
-        			window.history.back(-1); 
-        			return false;
-        		})
-        	})
+        $(function () {
+            $(".fix .nav-head a").click(function () {
+                window.history.back(-1);
+                return false;
+            })
+            //创建MeScroll对象
+            var mescroll = new MeScroll("mescroll", {
+                down: {
+                    auto: false, //是否在初始化完毕之后自动执行下拉回调callback; 默认true
+                    callback: downCallback //下拉刷新的回调
+                },
+                up: {
+                    auto: false, //是否在初始化时以上拉加载的方式自动加载第一页数据; 默认false
+                    callback: upCallback //上拉回调,此处可简写; 相当于 callback: function (page) { upCallback(page); }
+                }
+            });
+
+            /*下拉刷新的回调 */
+            function downCallback() {
+                //联网加载数据
+                getListDataFromNet(0, 1, function (data) {
+                    //联网成功的回调,隐藏下拉刷新的状态
+                    mescroll.endSuccess();
+                    //设置列表数据
+                    setListData(data, false);
+                }, function () {
+                    //联网失败的回调,隐藏下拉刷新的状态
+                    mescroll.endErr();
+                });
+            }
+
+            /*上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
+            function upCallback(page) {
+                //联网加载数据
+                console.log("page.num=" + page.num);
+                getListDataFromNet(page.num, page.size, function (data) {
+                    //联网成功的回调,隐藏下拉刷新和上拉加载的状态;
+                    mescroll.endSuccess(data.length); //传参:数据的总数; mescroll会自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
+                    //设置列表数据
+                    setListData(data, true);
+                }, function () {
+                    //联网失败的回调,隐藏下拉刷新和上拉加载的状态;
+                    mescroll.endErr();
+                });
+            }
+
+            /*设置列表数据*/
+            function setListData(data, isAppend) {
+                var listDom = document.getElementById("newsList");
+                for (var i = 0; i < data.length; i++) {
+                    var newObj = data[i];
+
+                    //                         var str = '<p>' + newObj.title + '</p>';
+                    //                         str += '<p class="new-content">' + newObj.content + '</p>';
+                    var divDom = document.createElement("tr");
+                    divDom.innerHTML = '<td>chen*aa</td><td>123</td><td>2018-6-10<br>12:15</td><td>PC</td>';
+                    if (isAppend) {
+                        listDom.appendChild(divDom); //加在列表的后面,上拉加载
+                    } else {
+                        listDom.insertBefore(divDom, listDom.firstChild); //加在列表的前面,下拉刷新
+                    }
+                }
+            }
+
+            /*联网加载列表数据*/
+            var downIndex = 0;
+
+            function getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) {
+                //延时一秒,模拟联网
+                setTimeout(function () {
+                    try {
+                        var newArr = [];
+                        if (pageNum == 0) {
+                            //此处模拟下拉刷新返回的数据
+                            window.location.reload();
+                        } else {
+                            //此处模拟上拉加载返回的数据
+                            for (var i = 0; i < pageSize; i++) {
+                                var upIndex = (pageNum - 1) * pageSize + i + 1;
+                                var newObj = {
+                                    title: "【新闻" + upIndex + "】 标题标题标题标题标题标题",
+                                    content: "内容" + upIndex
+                                };
+                                newArr.push(newObj);
+                            }
+                        }
+                        //联网成功的回调
+                        successCallback && successCallback(newArr);
+                    } catch (e) {
+                        //联网失败的回调
+                        errorCallback && errorCallback();
+                    }
+                }, 1000)
+            }
+
+            //禁止PC浏览器拖拽图片,避免与下拉刷新冲突;如果仅在移动端使用,可删除此代码
+            document.ondragstart = function () {
+                return false;
+            }
+
+        })
     </script>
 </body>
 
