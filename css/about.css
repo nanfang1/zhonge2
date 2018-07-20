@@ -83,7 +83,9 @@ body {
 #collapseThree li {
     list-style-type: square;
 }
-
+#collapseOne img{
+	width: 40%;
+}
 
 /*发展历程*/
 

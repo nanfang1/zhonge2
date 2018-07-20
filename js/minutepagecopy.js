@@ -1,4 +1,6 @@
 $(function () {
+    //---------------------------------------------------
+    
     function display(ele, text, timer1) {
         $(ele).text(text).css({
             display: "block"
@@ -37,7 +39,6 @@ $(function () {
                     return false;
                 }
             }
-
         }
     })
 })

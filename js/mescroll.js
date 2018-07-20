@@ -127,7 +127,7 @@
       offset: 100, //列表滚动到距离底部小于100px,即可触发上拉加载的回调
       toTop: {
         //回到顶部按钮,需配置src才显示
-        src: null, //图片路径,默认null;
+        src:null, //图片路径,默认null;
         offset: 1000, //列表滚动多少距离才显示回到顶部按钮,默认1000
         warpClass: "mescroll-totop", //按钮样式,参见mescroll.css
         showClass: "mescroll-fade-in", //显示样式,参见mescroll.css

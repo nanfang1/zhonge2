@@ -62,9 +62,30 @@
     font-size: 1.2rem;
     color: white;
 }
-
 .asset-wrapper a {
     color: white;
+}
+.asset-wrapper a:link {
+	text-decoration: none;
+	/* 指正常的未被访问过的链接*/
+	color: white;
+}
+
+.asset-wrapper a:visited {
+	text-decoration: none;
+	/*指已经访问过的链接*/
+	color: white;
+}
+
+.asset-wrapper a:hover {
+	text-decoration: none;
+	/*指鼠标在链接*/
+	color: white;
+}
+.asset-wrapper a:active {
+	text-decoration: none;
+	/* 指正在点的链接*/
+	color: white;
 }
 
 .asset-wrapper .money-category {
@@ -872,7 +893,7 @@
     height: 2rem;
 }
 
-.phone-num-group #code {
+.phone-num-group #get-code {
     background-color: #4DD0C8 !important;
     color: white;
     border-radius: 0;
@@ -915,12 +936,39 @@
     left: 5rem;
     font-size: 1.3rem;
 }
+.card-a:link {
+    text-decoration: none;
+}
 
+
+
+/* 指正常的未被访问过的链接*/
+
+.card-a:visited {
+    text-decoration: none;
+}
+
+
+
+/*指已经访问过的链接*/
+
+.card-a:hover {
+    text-decoration: none;
+}
+
+
+
+/*指鼠标在链接*/
+
+.card-a:active {
+    text-decoration: none;
+}
 .card-a {
     display: block;
     text-align: center;
     height: 4rem;
     line-height: 4rem;
+	text-decoration: none;
 }
 
 /* 绑定 银行卡 开户行信息 */

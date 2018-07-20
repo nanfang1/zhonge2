@@ -6,24 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user-bank-card</title>
-    <link rel="stylesheet" type="text/css" href="css/mescroll.css" />
-    <link rel="stylesheet" href="css/my.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/public-top.css" />
+    <link rel="stylesheet" type="text/css" href="css/mybankcard1.css" />
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/back.js"></script>
-    <script src="js/mescroll.js"></script>
     <style>
         body {
             background-color: #f9f9f9;
         }
-		#mescroll{
-			top: 4rem;
-		}
-		.add-card{
-			margin-top: 2rem;
-		}
     </style>
 </head>
 
@@ -34,75 +28,114 @@
             <div class="nav-head">
                 <a id="back" class="prev"></a>
                 <h4>我的银行卡</h4>
+                <a class="add-car" href="addbankcard.html">
+                    +
+                </a>
             </div>
         </nav>
     </div>
-    <div id="mescroll" class="mescroll">
-        <a class="add-card" href="user-bank-addcard.html">
+    <div class="container-fluid top">
+        <div class="row bankCard-wrapper">
+            <div class="col-xs-10 col-xs-push-1 sum card-bg">
+                <div class="row modify ">
+                    <div class="col-xs-7">
+                        <img src="image/bank_card1.png" id="img1" />
+                        <span class="bank-name">中国银行</span>
+                    </div>
+                    <div class="col-xs-5 col-xs-push-7 text-right center-vertical">
+                        <i class="iconfont" id="bcDelete">&#xe61d;</i>
+                    </div>
+                </div>
+            
+                <div class="row bank-num-Wrapper">
+                    <div class="col-xs-12">
+                        <h3 class="banknumber">6217123456782154</h3>
+                        <img src="image/bank_card1.png"  />
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            +
-
-        </a>
+        <!--  -->
+        <div class="row bankCard-wrapper">
+            <div class="col-xs-10 col-xs-push-1 sum card-bg">
+                <div class="row modify ">
+                    <div class="col-xs-7">
+                        <img src="image/bank_card1.png" id="img1" />
+                        <span>中国银行</span>
+                    </div>
+                    <div class="col-xs-5 col-xs-push-7 text-right center-vertical">
+                        <i class="iconfont" id="bcDelete">&#xe61d;</i>
+                    </div>
+                </div>
+                
+                <div class="row bank-num-Wrapper">
+                    <div class="col-xs-12">
+                        <h3 class="banknumber">6217123456782154</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row bankCard-wrapper">
+            <div class="col-xs-10 col-xs-push-1 sum card-bg">
+                <div class="row modify ">
+                    <div class="col-xs-7">
+                        <img src="bankCardImage/bank_card1.png" id="img1" />
+                        <span>中国银行</span>
+                    </div>
+                    <div class="col-xs-5 col-xs-push-7 text-right center-vertical">
+                        <i class="iconfont" id="bcDelete">&#xe61d;</i>
+                    </div> 
+                </div>
+               
+                <div class="row bank-num-Wrapper">
+                    <div class="col-xs-12">
+                        <h3 class="banknumber">6217123456782154</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <script src="js/rgbaster.min.js"></script>
+    <script src="js/mybankcard1.js"></script>
+    
     <script>
-        //下拉刷新
-        $(function () {
-            //创建MeScroll对象
-            var mescroll = new MeScroll("mescroll", {
-                down: {
-                    auto: false, //是否在初始化完毕之后自动执行下拉回调callback; 默认true
-                    callback: downCallback //下拉刷新的回调
-                },
-                up: {
-                    use: false //禁止上滑刷新
-                }
-            });
-
-            /*下拉刷新的回调 */
-            function downCallback() {
-                //联网加载数据
-                getListDataFromNet(0, 1, function (data) {
-                    //联网成功的回调,隐藏下拉刷新的状态
-                    mescroll.endSuccess();
-                    //设置列表数据
-                    setListData(data, false);
-                }, function () {
-                    //联网失败的回调,隐藏下拉刷新的状态
-                    mescroll.endErr();
-                });
-            }
-            /*设置列表数据*/
-            function setListData(data, isAppend) {
-
-            }
-
-            /*联网加载列表数据*/
-            var downIndex = 0;
-
-            function getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) {
-                //延时一秒,模拟联网
-                setTimeout(function () {
-                    try {
-                        var newArr = [];
-                        if (pageNum == 0) {
-                            //刷新页面
-                            window.location.reload();
-                        }
-                        //联网成功的回调
-                        successCallback && successCallback(newArr);
-                    } catch (e) {
-                        //联网失败的回调
-                        errorCallback && errorCallback();
-                    }
-                }, 1000)
-            }
-
-            //禁止PC浏览器拖拽图片,避免与下拉刷新冲突;如果仅在移动端使用,可删除此代码
-            document.ondragstart = function () {
-                return false;
+        var img = document.getElementById('img1');
+        var dominant;
+       
+       
+        RGBaster.colors(img, {
+            success: function (payload) {
+                // payload.dominant是主色，RGB形式表示
+                // payload.secondary是次色，RGB形式表示
+                // payload.palette是调色板，含多个主要颜色，数组
+               dominant = payload.dominant
+               var a = changeColor(dominant);
+			   console.log(a.colorEnd);
+			   console.log(a.colorStart);
+               $(".card-bg").css("background", "linear-gradient(to right, " + a.colorStart + "," + a.colorEnd +
+                    "100%)");
             }
         });
+        function changeColor(dominant) {  
+            //  截取 取到rgb颜色中的数字始末部分，然后分割成数组
+            var arr = dominant.substring(4,12).split(',');
+			var arr1 = [];
+            for(var i = 0; i < arr.length; i ++){
+               arr[i] =  parseInt(arr[i])+90;
+			   arr1.push(parseInt(arr[i])-50)
+            }
+			
+            return {
+				colorStart : "rgb(" + arr.join() + ")",
+				colorEnd : "rgb(" + arr1.join() + ")"
+			};
+
+        }   
     </script>
+
 </body>
 
 </html>

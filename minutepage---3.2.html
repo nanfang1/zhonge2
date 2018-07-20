@@ -32,7 +32,7 @@
 <body>
     <div class="container-fluid inf-wrapper">
         <div class="fix inf-nav navbar-fixed-top">
-            <div class="nav-head">
+            <div class="nav-head ">
                 <a id="back" class="center-vertical1 prev"></a>
                 <h4>众筹项目</h4>
             </div>
@@ -101,14 +101,21 @@
                         <span class="count-down" id="count-down">4天23时26分21秒</span>
                     </div>
                 </div>
-                <div class="row row-box3">
+                <div id="online" class="row row-box3">
                     <div class=" newlrp">
                         <span id="hava">可用资金
                             <b>￥</b>
                         </span>
                         <span class="sumofmoney" id="sumofmoney">0.00</span>
                     </div>
-
+                </div>
+                <div id="notonline" class=" row row-box3">
+                    <div class="col-xs-3 newlrp">
+                        <span>可用资金</span>
+                    </div>
+                    <a href="login.html" class="col-xs-2 col-xs-push-6 btn btn-default active focus login">
+                        登录
+                    </a>
                 </div>
                 <a href="raisejs.html" class="row row-box4 " id="jieshao">
                     <div class="col-xs-3 newlrp">
@@ -145,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="row navbar-fixed-bottom order">
+        <div id="underway" class=" row navbar-fixed-bottom order">
             <div class="col-xs-8 center-vertical ">
                 <div id="inpT">
                     <div id="inpl" class=" reduce">-</div>
@@ -157,9 +164,14 @@
                 立即订购
             </div>
         </div>
+        <div id="row" class="sold navbar-fixed-bottom row-box-5">
+            <span id="">
+                待售中
+            </span>
+        </div>
 
     </div>
-    <script src="js/minutepagecopy.js"></script>
+    <!--<script src="js/minutepagecopy.js"></script>-->
     <script>
         var number = 50;
         document.getElementById("clearmg").innerHTML = number;
@@ -224,7 +236,7 @@
                         var newArr = [];
                         if (pageNum == 0) {
                             //刷新页面
-                           window.location.reload();
+                            window.location.reload();
                         }
                         //联网成功的回调
                         successCallback && successCallback(newArr);
@@ -239,6 +251,158 @@
             document.ondragstart = function () {
                 return false;
             }
+            //---------------------------------------------------
+            // 登陆状态
+            var flag1 = true; //true为已登陆
+            //众筹状态
+            var flag2 = true; //true为正在众筹
+            //实名状态
+            var flag3 = false; //true为已实名
+            if (flag1 && flag2) { //已登陆正售
+                alert(1);
+                $("#notonline").css("display", "none"); //未登录
+                $("#online").css("display", "block"); //已登陆
+                $("#row").css("display", "none"); //未售
+                $("#underway").css("display", "block"); //正售
+                function display(ele, text, timer1) {
+                    $(ele).text(text).css({
+                        display: "block"
+                    });
+                    clearTimeout(timer1);
+                    timer1 = setTimeout(function () {
+                        $(ele).css({
+                            display: "none"
+                        });
+                    }, 1500);
+                }
+                // var ifreal=false;//载入页面为未认证状态
+                $("#order-ok").click(function () {
+                    //登陆之后判断是否实名认证
+                    if (!flag3) {
+                        $.dialog({
+                            type: 'confirm',
+                            titleText: "请先实名认证",
+                            onClickOk: function () {
+                                flag3 = true;
+                                window.location.href="./user-inf-realname.html";
+                            },
+                            onClickCancel: function () {
+                                alert('你点了取消~~');
+                            }
+                        });
+                    } else {
+                        var timer1 = null;
+                        if ($("#qty_item_1").val() == '') {
+                            display("#prompt", "中e众筹：请先输入认购份数", timer1);
+                        } else {
+                            if ($("#sumofmoney").text() == 0) {
+                                display("#prompt", "中e众筹：余额不足，请充值", timer1);
+                            } else {
+                                //立即订购下一步
+                                return false;
+                            }
+                        }
+
+                    }
+                })
+            } else if (!flag1 && !flag2) { //未登录未售
+                alert(2);
+                $("#notonline").css("display", "block"); //未登录
+                $("#online").css("display", "none"); //已登陆
+                $("#row").css("display", "block"); //未售
+                $("#underway").css("display", "none"); //正售
+                $('#jieshao').click(function () {
+                    if (!flag0) {
+                        $.dialog({
+                            type: 'confirm',
+                            titleText: "请登陆！",
+                            onClickOk: function () {
+                                window.location.href = "./login.html";
+                                flag0 = true;
+                            },
+                            onClickCancel: function () {
+                                alert('你点了取消~~');
+                            }
+                        });
+                    }
+                    return false;
+                });
+                $('#contract').click(function () {
+                    if (!flag0) {
+                        $.dialog({
+                            type: 'confirm',
+                            titleText: "请登陆！",
+                            onClickOk: function () {
+                                window.location.href = "./login.html";
+                                flag0 = true;
+                            },
+                            onClickCancel: function () {
+                                alert('你点了取消~~');
+                            }
+                        });
+                    }
+                    return false;
+                });
+            } else if (flag1 && !flag2) { //已登陆未售
+                alert(3);
+                $("#notonline").css("display", "none"); //未登录
+                $("#online").css("display", "block"); //已登陆
+                $("#row").css("display", "block"); //未售
+                $("#underway").css("display", "none"); //正售
+            } else { //未登录正售
+                alert(4);
+                $("#notonline").css("display", "block"); //未登录
+                $("#online").css("display", "none"); //已登陆
+                $("#row").css("display", "none"); //未售
+                $("#underway").css("display", "block"); //正售
+                var flag0 = false;
+                $('#jieshao').click(function () {
+                    if (!flag0) {
+                        $.dialog({
+                            type: 'confirm',
+                            titleText: "请登陆！",
+                            onClickOk: function () {
+                                window.location.href = "./login.html";
+                                flag0 = true;
+                            },
+                            onClickCancel: function () {
+                                alert('你点了取消~~');
+                            }
+                        });
+                    }
+                    return false;
+                });
+                $('#contract').click(function () {
+                    if (!flag0) {
+                        $.dialog({
+                            type: 'confirm',
+                            titleText: "请登陆！",
+                            onClickOk: function () {
+                                window.location.href = "./login.html";
+                                flag0 = true;
+                            },
+                            onClickCancel: function () {
+                                alert('你点了取消~~');
+                            }
+                        });
+                    }
+                    return false;
+                });
+                $('#order-ok').click(function () {
+                    $.dialog({
+                        type: 'confirm',
+                        titleText: "请登陆！",
+                        onClickOk: function () {
+                            window.location.href = "./login.html";
+                        },
+                        onClickCancel: function () {
+                            alert('你点了取消~~');
+                        }
+                    });
+                    return false;
+                });
+            }
+
         });
     </script>
 </body>

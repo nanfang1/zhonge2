@@ -1,5 +1,5 @@
 $(function () {
-    //银行卡信息验证
+    //我的银行卡信息验证
     var list1 = [{
             reg: /^([1-9]{1})(\d{14}|\d{18})$/,
             prompt: "银行卡号格式错误",
@@ -38,7 +38,6 @@ $(function () {
         var yzm = "123456";
         $("")
         if (a == $("input[type='text']").length) {
-
             var num = 0;
             $("input[type='text']").each(function (index) {
                 if (list1[index].reg.test(this.value) == true) {
@@ -54,7 +53,6 @@ $(function () {
 
                     display("#prompt", "保存成功", timer1);
                     return false;
-
                 } else {
                     display("#prompt", "验证码错误", timer1);
                     return false;
@@ -83,6 +81,8 @@ $(function () {
     // var flag = true;
     $(".verification").click(function () {
         var countdown = 60;
+        $(this).attr("disabled", "disabled").css("color", "#999999").text("重新发送" +
+            "(" + countdown + ")");
         var $_this = $(this);
         timer = setInterval(function () {
             countdown--;
@@ -96,7 +96,7 @@ $(function () {
         }, 1000)
     })
     //获取验证码倒计时结束
-    //加载页面省市联动 
+    //初始页面省市联动 
     var mybank_val = "6";
     var province_val = "18";
     var city = "0";
@@ -108,5 +108,5 @@ $(function () {
     chooseProvince(myselect);
     $("#city").val(city);
     $("#zhihang").val(zhihang);
-    //加载页面省市联动结束
+    //初始页面省市联动结束
 })

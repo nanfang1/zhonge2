@@ -406,7 +406,12 @@
     background-color: #fff;
     border-bottom: 0.1rem solid #eee;
 }
-
+button {
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #4DD0C8;
+}
 
 
 

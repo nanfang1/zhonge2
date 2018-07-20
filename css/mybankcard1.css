@@ -1,16 +1,45 @@
 html,
 body {
 	height: 100%;
-	background-color: #F2F2F2;
+	background-color: #f9f9f9;
+}
+.user-nav {
+    background-color: #fff;
 }
 
+.user-nav .nav-head {
+    position: relative;
+    text-align: center;
+    border-bottom: 0.1rem solid #ccc;
+    height: 4rem;
+}
+
+.user-nav .nav-head .prev {
+    position: absolute;
+    left: 0.8rem;
+    top: 1.2rem;
+}
+
+.user-nav .nav-head h4 {
+    margin: 0;
+    line-height: 4rem;
+}
 .top {
 	margin-top: 4.2rem;
 	background-color: #f2f2f2;
 }
-
+.bankCard-wrapper{
+	overflow: hidden;	
+}
 div.modify {
 	position: relative;
+}
+.modify img{
+	max-width: 26px;
+	max-height: 26px;
+}
+.modify span{
+	font-family:Microsoft YaHei;
 }
 
 .center-vertical {
@@ -22,6 +51,8 @@ div.modify {
 .top .row .row {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
 }
 
 .top .row .row p {
@@ -37,14 +68,26 @@ div.modify {
 }
 
 .top .row {
-	padding: 2rem 0rem;
+	padding: 1rem 0 0 0;
 }
 
 .top .row .sum {
 	position: relative;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	overflow: hidden;
 }
-.top .row .row:nth-child(3) h3{
-	margin-top: 0rem;
-	margin-bottom: 2rem;
-	text-indent: 3rem;
+.bank-num-Wrapper{
+	text-align: center;
+}
+.bank-num-Wrapper h3{
+	margin-top: 0;
+}
+.bank-num-Wrapper img{
+	position: absolute;
+	right: -10px;
+	bottom: -66px;
+	min-width: 124px;
+	min-height: 80px;
+	opacity: 0.2;
 }

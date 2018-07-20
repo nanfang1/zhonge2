@@ -33,6 +33,11 @@
 
 
 
+
+
+
+
+
 /*跳转搜索结束*/
 
 
@@ -44,9 +49,15 @@
     bottom: 0;
     height: auto;
 }
-.downwarp-content{
-	top: 0rem;
+
+.downwarp-content {
+    top: 0rem;
 }
+
+
+
+
+
 
 
 /*展示上拉加载的数据列表*/
@@ -64,6 +75,11 @@
 }
 
 
+
+
+
+
+
 /*头部固定*/
 
 .fixed_top {
@@ -73,6 +89,11 @@
 .centerNav ul {
     margin-bottom: 0rem;
 }
+
+
+
+
+
 
 
 /*众筹分类*/
@@ -103,6 +124,11 @@
 .border {
     border-bottom: 1px solid #4DD0C8;
 }
+
+
+
+
+
 
 
 
@@ -163,6 +189,14 @@ img {
     padding-left: .5rem;
     color: #d51925;
     font-size: 1.4rem;
+}
+
+.progress-mg {
+    margin-top: 1rem;
+}
+
+.moneymg {
+    margin-top: 0rem;
 }
 
 .sale {
@@ -236,6 +270,36 @@ img {
     /*left: 50%;*/
     transform: translateY(-50%);
 }
+@media screen and (max-width:360px) {
+    .col-xs-4 img {
+        width: 10.3rem;
+    }
+}
+@media screen and (min-width:376px) {
+    .col-xs-4 img {
+        width: 11rem;
+    }
+}
+@media screen and (min-width:768px) {
+    .col-xs-4 {
+        width: 16.333333%;
+    }
+    .col-xs-4 img {
+        width: 11rem;
+    }
+    .col-xs-8 {
+        width: 83.666667%;
+    }
+    #newsList li .col-xs-push-9 {
+        left: 81%;
+        width: 10%;
+    }
+}
+
+
+
+
+
 
 
 
@@ -263,6 +327,11 @@ img {
 .glyphicons {
     font-size: 2rem;
 }
+
+
+
+
+
 
 
 /*底部菜单结束*/
